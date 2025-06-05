@@ -2,16 +2,18 @@
 import React, { useState } from 'react';
 import { Menu, X, Phone, Mail } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { Link, useLocation } from 'react-router-dom';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const location = useLocation();
 
   const navItems = [
-    { name: 'Accueil', href: '#accueil' },
-    { name: 'Nos Activités', href: '#activites' },
-    { name: 'Réalisations', href: '#realisations' },
-    { name: 'À propos', href: '#apropos' },
-    { name: 'Contact', href: '#contact' },
+    { name: 'Accueil', href: '/' },
+    { name: 'Nos Activités', href: '/services' },
+    { name: 'Réalisations', href: '/realisations' },
+    { name: 'À propos', href: '/about' },
+    { name: 'Contact', href: '/contact' },
   ];
 
   return (
@@ -41,31 +43,39 @@ const Header = () => {
           <div className="flex justify-between items-center h-20">
             {/* Logo */}
             <div className="flex items-center">
-              <img 
-                src="/lovable-uploads/f6460a81-4868-496c-947d-e70ac8644a23.png" 
-                alt="Bardeurs Occitans" 
-                className="h-12 w-auto"
-              />
+              <Link to="/">
+                <img 
+                  src="/lovable-uploads/f6460a81-4868-496c-947d-e70ac8644a23.png" 
+                  alt="Bardeurs Occitans" 
+                  className="h-12 w-auto"
+                />
+              </Link>
             </div>
 
             {/* Desktop Navigation */}
             <nav className="hidden lg:flex items-center space-x-8">
               {navItems.map((item) => (
-                <a
+                <Link
                   key={item.name}
-                  href={item.href}
-                  className="text-bo-dark hover:text-bo-orange transition-colors duration-300 font-medium"
+                  to={item.href}
+                  className={`transition-colors duration-300 font-medium ${
+                    location.pathname === item.href 
+                      ? 'text-bo-orange' 
+                      : 'text-bo-dark hover:text-bo-orange'
+                  }`}
                 >
                   {item.name}
-                </a>
+                </Link>
               ))}
             </nav>
 
             {/* CTA Button */}
             <div className="hidden lg:block">
-              <Button className="bg-bo-orange hover:bg-bo-orange/90 text-white">
-                Demander un devis
-              </Button>
+              <Link to="/contact">
+                <Button className="bg-bo-orange hover:bg-bo-orange/90 text-white">
+                  Demander un devis
+                </Button>
+              </Link>
             </div>
 
             {/* Mobile Menu Button */}
@@ -82,18 +92,24 @@ const Header = () => {
             <div className="lg:hidden py-4 border-t">
               <nav className="flex flex-col space-y-4">
                 {navItems.map((item) => (
-                  <a
+                  <Link
                     key={item.name}
-                    href={item.href}
-                    className="text-bo-dark hover:text-bo-orange transition-colors duration-300 font-medium"
+                    to={item.href}
+                    className={`transition-colors duration-300 font-medium ${
+                      location.pathname === item.href 
+                        ? 'text-bo-orange' 
+                        : 'text-bo-dark hover:text-bo-orange'
+                    }`}
                     onClick={() => setIsMenuOpen(false)}
                   >
                     {item.name}
-                  </a>
+                  </Link>
                 ))}
-                <Button className="bg-bo-orange hover:bg-bo-orange/90 text-white w-full mt-4">
-                  Demander un devis
-                </Button>
+                <Link to="/contact" onClick={() => setIsMenuOpen(false)}>
+                  <Button className="bg-bo-orange hover:bg-bo-orange/90 text-white w-full mt-4">
+                    Demander un devis
+                  </Button>
+                </Link>
               </nav>
             </div>
           )}

@@ -1,34 +1,11 @@
 
-import React, { useState } from 'react';
+import React from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Textarea } from '@/components/ui/textarea';
-import { Phone, Mail, MapPin, Clock, Send } from 'lucide-react';
+import { Phone, Mail, MapPin, Clock, ArrowRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const Contact = () => {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    phone: '',
-    subject: '',
-    message: ''
-  });
-
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { name, value } = e.target;
-    setFormData(prev => ({
-      ...prev,
-      [name]: value
-    }));
-  };
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    console.log('Form submitted:', formData);
-    // Here you would typically send the form data to your backend
-  };
-
   const contactInfo = [
     {
       icon: <Phone className="text-bo-orange" size={24} />,
@@ -70,9 +47,9 @@ const Contact = () => {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-3 gap-12">
+        <div className="grid lg:grid-cols-2 gap-12">
           {/* Contact Info */}
-          <div className="lg:col-span-1 space-y-6">
+          <div className="grid md:grid-cols-2 gap-6">
             {contactInfo.map((info, index) => (
               <Card key={index} className="hover:shadow-lg transition-shadow duration-300">
                 <CardContent className="p-6">
@@ -89,119 +66,53 @@ const Contact = () => {
                 </CardContent>
               </Card>
             ))}
+          </div>
 
-            {/* Google Maps Placeholder */}
-            <Card className="overflow-hidden">
-              <CardContent className="p-0">
-                <div className="h-64 bg-gradient-to-br from-bo-blue to-bo-dark flex items-center justify-center">
-                  <div className="text-center text-white">
-                    <MapPin size={48} className="mx-auto mb-4 text-bo-orange" />
-                    <p className="font-semibold">Localisation</p>
-                    <p className="text-sm">Toulouse, Occitanie</p>
+          {/* CTA Section */}
+          <div className="flex items-center">
+            <Card className="w-full shadow-xl">
+              <CardContent className="p-8 text-center">
+                <h3 className="text-2xl font-bold text-bo-dark mb-4">
+                  Demandez votre devis gratuit
+                </h3>
+                <p className="text-gray-600 mb-8 leading-relaxed">
+                  Remplissez notre formulaire détaillé et recevez une proposition 
+                  personnalisée sous 48h maximum.
+                </p>
+                
+                <div className="space-y-4">
+                  <Link to="/contact">
+                    <Button size="lg" className="bg-bo-orange hover:bg-bo-orange/90 text-white w-full">
+                      Formulaire de devis
+                      <ArrowRight className="ml-2" size={20} />
+                    </Button>
+                  </Link>
+                  
+                  <div className="text-center text-sm text-gray-500">
+                    <p>ou appelez-nous directement</p>
+                    <a href="tel:05XXXXXXXX" className="text-bo-orange font-semibold hover:underline">
+                      05 XX XX XX XX
+                    </a>
                   </div>
                 </div>
               </CardContent>
             </Card>
           </div>
+        </div>
 
-          {/* Contact Form */}
-          <div className="lg:col-span-2">
-            <Card className="shadow-xl">
-              <CardContent className="p-8">
-                <h3 className="text-2xl font-bold text-bo-dark mb-6">
-                  Demande de devis gratuit
-                </h3>
-                
-                <form onSubmit={handleSubmit} className="space-y-6">
-                  <div className="grid md:grid-cols-2 gap-6">
-                    <div>
-                      <label className="block text-sm font-medium text-gray-700 mb-2">
-                        Nom complet *
-                      </label>
-                      <Input
-                        type="text"
-                        name="name"
-                        value={formData.name}
-                        onChange={handleInputChange}
-                        required
-                        placeholder="Votre nom"
-                        className="border-gray-300 focus:border-bo-orange focus:ring-bo-orange"
-                      />
-                    </div>
-                    
-                    <div>
-                      <label className="block text-sm font-medium text-gray-700 mb-2">
-                        Email *
-                      </label>
-                      <Input
-                        type="email"
-                        name="email"
-                        value={formData.email}
-                        onChange={handleInputChange}
-                        required
-                        placeholder="votre@email.com"
-                        className="border-gray-300 focus:border-bo-orange focus:ring-bo-orange"
-                      />
-                    </div>
-                  </div>
-
-                  <div className="grid md:grid-cols-2 gap-6">
-                    <div>
-                      <label className="block text-sm font-medium text-gray-700 mb-2">
-                        Téléphone
-                      </label>
-                      <Input
-                        type="tel"
-                        name="phone"
-                        value={formData.phone}
-                        onChange={handleInputChange}
-                        placeholder="06 XX XX XX XX"
-                        className="border-gray-300 focus:border-bo-orange focus:ring-bo-orange"
-                      />
-                    </div>
-                    
-                    <div>
-                      <label className="block text-sm font-medium text-gray-700 mb-2">
-                        Sujet
-                      </label>
-                      <Input
-                        type="text"
-                        name="subject"
-                        value={formData.subject}
-                        onChange={handleInputChange}
-                        placeholder="Bardage, Étanchéité, Autre..."
-                        className="border-gray-300 focus:border-bo-orange focus:ring-bo-orange"
-                      />
-                    </div>
-                  </div>
-
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">
-                      Votre message *
-                    </label>
-                    <Textarea
-                      name="message"
-                      value={formData.message}
-                      onChange={handleInputChange}
-                      required
-                      rows={6}
-                      placeholder="Décrivez votre projet..."
-                      className="border-gray-300 focus:border-bo-orange focus:ring-bo-orange"
-                    />
-                  </div>
-
-                  <Button 
-                    type="submit" 
-                    size="lg" 
-                    className="w-full bg-bo-orange hover:bg-bo-orange/90 text-white"
-                  >
-                    <Send className="mr-2" size={20} />
-                    Envoyer ma demande
-                  </Button>
-                </form>
-              </CardContent>
-            </Card>
-          </div>
+        {/* Google Maps Placeholder */}
+        <div className="mt-16">
+          <Card className="overflow-hidden">
+            <CardContent className="p-0">
+              <div className="h-64 bg-gradient-to-br from-bo-blue to-bo-dark flex items-center justify-center">
+                <div className="text-center text-white">
+                  <MapPin size={48} className="mx-auto mb-4 text-bo-orange" />
+                  <p className="font-semibold">Zone d'intervention : Occitanie</p>
+                  <p className="text-sm">Basés à Toulouse, nous intervenons dans toute la région</p>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
         </div>
       </div>
     </section>

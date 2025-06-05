@@ -3,6 +3,7 @@ import React from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Wrench, Droplets, ArrowRight, CheckCircle } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const Services = () => {
   const services = [
@@ -67,10 +68,12 @@ const Services = () => {
                   ))}
                 </ul>
                 
-                <Button className="bg-bo-orange hover:bg-bo-orange/90 text-white w-full">
-                  En savoir plus
-                  <ArrowRight className="ml-2" size={16} />
-                </Button>
+                <Link to="/services">
+                  <Button className="bg-bo-orange hover:bg-bo-orange/90 text-white w-full">
+                    En savoir plus
+                    <ArrowRight className="ml-2" size={16} />
+                  </Button>
+                </Link>
               </CardContent>
             </Card>
           ))}
@@ -84,10 +87,12 @@ const Services = () => {
           <p className="text-xl mb-8 text-gray-300">
             Contactez-nous pour une étude personnalisée et un devis gratuit
           </p>
-          <Button size="lg" className="bg-bo-orange hover:bg-bo-orange/90 text-white">
-            Demander un devis gratuit
-            <ArrowRight className="ml-2" size={20} />
-          </Button>
+          <Link to="/contact">
+            <Button size="lg" className="bg-bo-orange hover:bg-bo-orange/90 text-white">
+              Demander un devis gratuit
+              <ArrowRight className="ml-2" size={20} />
+            </Button>
+          </Link>
         </div>
       </div>
     </section>

@@ -2,7 +2,9 @@
 import React from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { Users, TrendingUp, Award, Building } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import { Users, TrendingUp, Award, Building, ArrowRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const About = () => {
   const timeline = [
@@ -84,8 +86,8 @@ const About = () => {
           {/* Company History */}
           <div>
             <h3 className="text-3xl font-bold text-bo-dark mb-8">Notre Histoire</h3>
-            <div className="space-y-8">
-              {timeline.map((item, index) => (
+            <div className="space-y-6">
+              {timeline.slice(0, 2).map((item, index) => (
                 <div key={index} className="flex items-start space-x-4">
                   <div className="flex-shrink-0 w-12 h-12 bg-bo-orange/10 rounded-full flex items-center justify-center">
                     {item.icon}
@@ -100,6 +102,14 @@ const About = () => {
                 </div>
               ))}
             </div>
+            <div className="mt-8">
+              <Link to="/about">
+                <Button className="bg-bo-orange hover:bg-bo-orange/90 text-white">
+                  Découvrir notre histoire complète
+                  <ArrowRight className="ml-2" size={16} />
+                </Button>
+              </Link>
+            </div>
           </div>
 
           {/* Groupe Gallart */}
@@ -110,8 +120,8 @@ const About = () => {
               offrant une expertise complète dans le domaine du BTP.
             </p>
             
-            <div className="space-y-4">
-              {groupeEntities.map((entity, index) => (
+            <div className="space-y-4 mb-8">
+              {groupeEntities.slice(0, 2).map((entity, index) => (
                 <Card key={index} className={`${entity.current ? 'border-bo-orange border-2 bg-bo-orange/5' : ''}`}>
                   <CardContent className="p-4">
                     <div className="flex items-center justify-between">
@@ -129,22 +139,38 @@ const About = () => {
                 </Card>
               ))}
             </div>
+            
+            <Link to="/about">
+              <Button variant="outline" className="border-bo-orange text-bo-orange hover:bg-bo-orange hover:text-white">
+                Voir toutes les entités
+                <ArrowRight className="ml-2" size={16} />
+              </Button>
+            </Link>
           </div>
         </div>
 
-        {/* Advantages */}
+        {/* Advantages Preview */}
         <div className="bg-bo-dark rounded-2xl p-12 text-white">
           <h3 className="text-3xl font-bold text-center mb-12">
             Nos <span className="text-bo-orange">Avantages Concurrentiels</span>
           </h3>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {advantages.map((advantage, index) => (
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+            {advantages.slice(0, 4).map((advantage, index) => (
               <div key={index} className="flex items-start space-x-3">
                 <div className="w-2 h-2 bg-bo-orange rounded-full mt-2 flex-shrink-0"></div>
                 <p className="text-gray-200">{advantage}</p>
               </div>
             ))}
+          </div>
+          
+          <div className="text-center">
+            <Link to="/about">
+              <Button variant="outline" className="border-white text-white hover:bg-white hover:text-bo-dark">
+                Découvrir tous nos avantages
+                <ArrowRight className="ml-2" size={16} />
+              </Button>
+            </Link>
           </div>
         </div>
       </div>

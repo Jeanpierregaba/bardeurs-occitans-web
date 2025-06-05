@@ -4,6 +4,7 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { ArrowRight, MapPin, Calendar } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const Realisations = () => {
   const projects = [
@@ -99,10 +100,12 @@ const Realisations = () => {
                   {project.description}
                 </p>
                 
-                <Button variant="outline" className="w-full border-bo-orange text-bo-orange hover:bg-bo-orange hover:text-white">
-                  Voir le projet
-                  <ArrowRight className="ml-2" size={16} />
-                </Button>
+                <Link to="/realisations">
+                  <Button variant="outline" className="w-full border-bo-orange text-bo-orange hover:bg-bo-orange hover:text-white">
+                    Voir le projet
+                    <ArrowRight className="ml-2" size={16} />
+                  </Button>
+                </Link>
               </CardContent>
             </Card>
           ))}
@@ -110,10 +113,12 @@ const Realisations = () => {
 
         {/* View All CTA */}
         <div className="text-center">
-          <Button size="lg" className="bg-bo-orange hover:bg-bo-orange/90 text-white">
-            Voir toutes nos réalisations
-            <ArrowRight className="ml-2" size={20} />
-          </Button>
+          <Link to="/realisations">
+            <Button size="lg" className="bg-bo-orange hover:bg-bo-orange/90 text-white">
+              Voir toutes nos réalisations
+              <ArrowRight className="ml-2" size={20} />
+            </Button>
+          </Link>
         </div>
       </div>
     </section>
