@@ -166,7 +166,7 @@ const About = () => {
           
           <div className="text-center">
             <Link to="/about">
-              <Button variant="outline" className="border-white text-white hover:bg-white hover:text-bo-dark">
+              <Button variant="outline" className="border-white text-bo-dark hover:bg-white hover:text-bo-dark">
                 Découvrir tous nos avantages
                 <ArrowRight className="ml-2" size={16} />
               </Button>

@@ -178,7 +178,7 @@ const Services = () => {
               Demander un devis gratuit
               <ArrowRight className="ml-2" size={20} />
             </Button>
-            <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-bo-dark">
+            <Button size="lg" variant="outline" className="border-white text-bo-dark hover:bg-white hover:text-bo-dark">
               Voir nos réalisations
             </Button>
           </div>

@@ -46,7 +46,7 @@ const Header = () => {
             <div className="flex items-center">
               <Link to="/">
                 <img 
-                  src="/lovable-uploads/f6460a81-4868-496c-947d-e70ac8644a23.png" 
+                  src="/lovable-uploads/logo-bardeurs-occitans.png" 
                   alt="Bardeurs Occitans" 
                   className="h-12 w-auto"
                 />

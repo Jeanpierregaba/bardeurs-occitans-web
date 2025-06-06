@@ -406,7 +406,7 @@ const Contact = () => {
               <Phone className="mr-2" size={20} />
               Urgence : 06 XX XX XX XX
             </Button>
-            <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-bo-dark">
+            <Button size="lg" variant="outline" className="border-white text-bo-dark hover:bg-white hover:text-bo-dark">
               <Calendar className="mr-2" size={20} />
               Planifier une visite
             </Button>

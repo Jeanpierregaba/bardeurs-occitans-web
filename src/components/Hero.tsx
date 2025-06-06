@@ -1,7 +1,8 @@
 
 import React from 'react';
 import { Button } from '@/components/ui/button';
-import { ArrowRight, Shield, Award, Users } from 'lucide-react';
+import { ArrowRight, Shield, Award, Users, } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const Hero = () => {
   return (
@@ -18,7 +19,7 @@ const Hero = () => {
           {/* Content */}
           <div className="text-white">
             <div className="mb-6">
-              <span className="inline-block bg-bo-orange/20 text-bo-orange px-4 py-2 rounded-full text-sm font-medium mb-4">
+              <span className="inline-block bg-bo-orange/20 text-bo-white px-4 py-2 rounded-full text-sm font-medium mb-4">
                 Experts en Bardage & Étanchéité
               </span>
               <h1 className="text-5xl lg:text-6xl font-bold leading-tight mb-6">
@@ -35,39 +36,17 @@ const Hero = () => {
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 mb-12">
-              <Button size="lg" className="bg-bo-orange hover:bg-bo-orange/90 text-white">
-                Demander un devis gratuit
-                <ArrowRight className="ml-2" size={20} />
-              </Button>
-              <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-bo-dark">
+              <Link to="/contact">
+                <Button size="lg" className="bg-bo-orange hover:bg-bo-orange/90 text-white">
+                  Demander un devis gratuit
+                  <ArrowRight className="ml-2" size={20} />
+                </Button>
+              </Link>
+              <Button size="lg" variant="outline" className="border-white text-bo-dark hover:bg-white hover:text-bo-dark">
                 Découvrir nos réalisations
               </Button>
             </div>
 
-            {/* Stats */}
-            <div className="grid grid-cols-3 gap-8">
-              <div className="text-center">
-                <div className="flex items-center justify-center w-12 h-12 bg-bo-orange/20 rounded-full mb-3 mx-auto">
-                  <Users className="text-bo-orange" size={24} />
-                </div>
-                <div className="text-2xl font-bold text-bo-orange">15+</div>
-                <div className="text-sm text-gray-300">Salariés qualifiés</div>
-              </div>
-              <div className="text-center">
-                <div className="flex items-center justify-center w-12 h-12 bg-bo-orange/20 rounded-full mb-3 mx-auto">
-                  <Award className="text-bo-orange" size={24} />
-                </div>
-                <div className="text-2xl font-bold text-bo-orange">2,6M€</div>
-                <div className="text-sm text-gray-300">Chiffre d'affaires 2024</div>
-              </div>
-              <div className="text-center">
-                <div className="flex items-center justify-center w-12 h-12 bg-bo-orange/20 rounded-full mb-3 mx-auto">
-                  <Shield className="text-bo-orange" size={24} />
-                </div>
-                <div className="text-2xl font-bold text-bo-orange">5+</div>
-                <div className="text-sm text-gray-300">Années d'expertise</div>
-              </div>
-            </div>
           </div>
 
           {/* Image/Visual */}

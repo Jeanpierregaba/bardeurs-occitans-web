@@ -44,9 +44,9 @@ const Footer = () => {
           <div className="lg:col-span-1">
             <div className="mb-6">
               <img 
-                src="/lovable-uploads/f6460a81-4868-496c-947d-e70ac8644a23.png" 
+                src="/lovable-uploads/logo-secondary.png" 
                 alt="Bardeurs Occitans" 
-                className="h-12 w-auto filter brightness-0 invert"
+                className="h-20 w-auto"
               />
             </div>
             

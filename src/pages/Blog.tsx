@@ -83,7 +83,7 @@ const Blog = () => {
       <Header />
       
       {/* Hero Section */}
-      <section className="bg-bo-dark text-white py-20">
+      <section className="bg-gradient-to-br from-bo-dark via-bo-blue to-bo-dark text-white py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl lg:text-5xl font-bold mb-6">
@@ -178,7 +178,7 @@ const Blog = () => {
               placeholder="Votre adresse email"
               className="flex-1 px-4 py-3 rounded-lg text-bo-dark"
             />
-            <Button className="bg-bo-orange hover:bg-bo-orange/90 text-white px-6">
+            <Button className="bg-bo-orange hover:bg-bo-orange/90 text-white px-8 py-6">
               S'abonner
             </Button>
           </div>

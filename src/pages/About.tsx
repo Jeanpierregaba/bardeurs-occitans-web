@@ -272,11 +272,11 @@ const About = () => {
             pour mener à bien votre projet de bardage ou d'étanchéité.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="bg-white text-bo-orange hover:bg-gray-100">
+            <Button size="lg" className="bg-white text-bo-dark hover:bg-gray-100">
               Demander un devis gratuit
               <ArrowRight className="ml-2" size={20} />
             </Button>
-            <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-bo-orange">
+            <Button size="lg" variant="outline" className="border-white text-bo-dark hover:bg-white hover:text-bo-orange">
               Découvrir nos services
             </Button>
           </div>
