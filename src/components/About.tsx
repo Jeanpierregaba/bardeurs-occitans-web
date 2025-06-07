@@ -1,10 +1,10 @@
-
 import React from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Users, TrendingUp, Award, Building, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import AnimatedSection from './AnimatedSection';
 
 const About = () => {
   const timeline = [
@@ -72,107 +72,117 @@ const About = () => {
     <section id="apropos" className="py-20 bg-gray-50">
       <div className="container mx-auto px-4">
         {/* Section Header */}
-        <div className="text-center mb-16">
-          <h2 className="text-4xl lg:text-5xl font-bold text-bo-dark mb-6">
-            À <span className="text-bo-orange">Propos</span>
-          </h2>
-          <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
-            Depuis 2019, Bardeurs Occitans s'impose comme un acteur de référence dans le secteur 
-            du bardage et de l'étanchéité en Occitanie, avec une croissance constante et une expertise reconnue.
-          </p>
-        </div>
+        <AnimatedSection animation="slide-up">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl lg:text-5xl font-bold text-bo-dark mb-6">
+              À <span className="text-bo-orange bg-gradient-to-r from-bo-orange to-orange-400 bg-clip-text text-transparent">Propos</span>
+            </h2>
+            <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
+              Depuis 2019, Bardeurs Occitans s'impose comme un acteur de référence dans le secteur 
+              du bardage et de l'étanchéité en Occitanie, avec une croissance constante et une expertise reconnue.
+            </p>
+          </div>
+        </AnimatedSection>
 
         <div className="grid lg:grid-cols-2 gap-16 mb-16">
           {/* Company History */}
-          <div>
-            <h3 className="text-3xl font-bold text-bo-dark mb-8">Notre Histoire</h3>
-            <div className="space-y-6">
-              {timeline.slice(0, 2).map((item, index) => (
-                <div key={index} className="flex items-start space-x-4">
-                  <div className="flex-shrink-0 w-12 h-12 bg-bo-orange/10 rounded-full flex items-center justify-center">
-                    {item.icon}
-                  </div>
-                  <div>
-                    <div className="flex items-center space-x-3 mb-2">
-                      <Badge className="bg-bo-orange text-white">{item.year}</Badge>
-                      <h4 className="text-xl font-semibold text-bo-dark">{item.title}</h4>
+          <AnimatedSection animation="slide-left">
+            <div>
+              <h3 className="text-3xl font-bold text-bo-dark mb-8">Notre Histoire</h3>
+              <div className="space-y-6">
+                {timeline.slice(0, 2).map((item, index) => (
+                  <div key={index} className="flex items-start space-x-4 hover-lift group">
+                    <div className="flex-shrink-0 w-12 h-12 bg-bo-orange/10 rounded-full flex items-center justify-center group-hover:bg-bo-orange/20 transition-colors duration-300">
+                      <div className="animate-float group-hover:scale-110 transition-transform duration-300">
+                        {item.icon}
+                      </div>
                     </div>
-                    <p className="text-gray-600">{item.description}</p>
+                    <div>
+                      <div className="flex items-center space-x-3 mb-2">
+                        <Badge className="bg-bo-orange text-white hover-scale">{item.year}</Badge>
+                        <h4 className="text-xl font-semibold text-bo-dark group-hover:text-bo-orange transition-colors duration-300">{item.title}</h4>
+                      </div>
+                      <p className="text-gray-600">{item.description}</p>
+                    </div>
                   </div>
+                ))}
+              </div>
+              <div className="mt-8">
+                <Link to="/about">
+                  <Button className="bg-bo-orange hover:bg-bo-orange/90 text-white hover-glow group">
+                    Découvrir notre histoire complète
+                    <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" size={16} />
+                  </Button>
+                </Link>
+              </div>
+            </div>
+          </AnimatedSection>
+
+          {/* Groupe Gallart */}
+          <AnimatedSection animation="slide-right">
+            <div>
+              <h3 className="text-3xl font-bold text-bo-dark mb-8">Groupe Gallart Bati Comminges</h3>
+              <p className="text-gray-600 mb-8 leading-relaxed">
+                Bardeurs Occitans fait partie d'un groupe solide de 4 entités complémentaires, 
+                offrant une expertise complète dans le domaine du BTP.
+              </p>
+              
+              <div className="space-y-4 mb-8 stagger-animation">
+                {groupeEntities.slice(0, 2).map((entity, index) => (
+                  <Card key={index} className={`hover-lift ${entity.current ? 'border-bo-orange border-2 bg-bo-orange/5' : ''}`}>
+                    <CardContent className="p-4">
+                      <div className="flex items-center justify-between">
+                        <div>
+                          <h4 className={`font-semibold ${entity.current ? 'text-bo-orange' : 'text-bo-dark'}`}>
+                            {entity.name}
+                          </h4>
+                          <p className="text-sm text-gray-600">{entity.specialty}</p>
+                        </div>
+                        {entity.current && (
+                          <Badge className="bg-bo-orange text-white animate-pulse-glow">Notre entreprise</Badge>
+                        )}
+                      </div>
+                    </CardContent>
+                  </Card>
+                ))}
+              </div>
+              
+              <Link to="/about">
+                <Button variant="outline" className="border-bo-orange text-bo-orange hover:bg-bo-orange hover:text-white hover-glow group">
+                  Voir toutes les entités
+                  <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" size={16} />
+                </Button>
+              </Link>
+            </div>
+          </AnimatedSection>
+        </div>
+
+        {/* Advantages Preview */}
+        <AnimatedSection animation="scale">
+          <div className="bg-gradient-to-r from-bo-dark to-bo-blue rounded-2xl p-12 text-white hover-lift animate-gradient">
+            <h3 className="text-3xl font-bold text-center mb-12">
+              Nos <span className="text-bo-orange">Avantages Concurrentiels</span>
+            </h3>
+            
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8 stagger-animation">
+              {advantages.slice(0, 4).map((advantage, index) => (
+                <div key={index} className="flex items-start space-x-3 hover-scale group">
+                  <div className="w-2 h-2 bg-bo-orange rounded-full mt-2 flex-shrink-0 group-hover:animate-pulse"></div>
+                  <p className="text-gray-200 group-hover:text-white transition-colors duration-300">{advantage}</p>
                 </div>
               ))}
             </div>
-            <div className="mt-8">
+            
+            <div className="text-center">
               <Link to="/about">
-                <Button className="bg-bo-orange hover:bg-bo-orange/90 text-white">
-                  Découvrir notre histoire complète
-                  <ArrowRight className="ml-2" size={16} />
+                <Button variant="outline" className="border-white text-bo-dark hover:bg-white hover:text-bo-dark hover-glow group">
+                  Découvrir tous nos avantages
+                  <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" size={16} />
                 </Button>
               </Link>
             </div>
           </div>
-
-          {/* Groupe Gallart */}
-          <div>
-            <h3 className="text-3xl font-bold text-bo-dark mb-8">Groupe Gallart Bati Comminges</h3>
-            <p className="text-gray-600 mb-8 leading-relaxed">
-              Bardeurs Occitans fait partie d'un groupe solide de 4 entités complémentaires, 
-              offrant une expertise complète dans le domaine du BTP.
-            </p>
-            
-            <div className="space-y-4 mb-8">
-              {groupeEntities.slice(0, 2).map((entity, index) => (
-                <Card key={index} className={`${entity.current ? 'border-bo-orange border-2 bg-bo-orange/5' : ''}`}>
-                  <CardContent className="p-4">
-                    <div className="flex items-center justify-between">
-                      <div>
-                        <h4 className={`font-semibold ${entity.current ? 'text-bo-orange' : 'text-bo-dark'}`}>
-                          {entity.name}
-                        </h4>
-                        <p className="text-sm text-gray-600">{entity.specialty}</p>
-                      </div>
-                      {entity.current && (
-                        <Badge className="bg-bo-orange text-white">Notre entreprise</Badge>
-                      )}
-                    </div>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
-            
-            <Link to="/about">
-              <Button variant="outline" className="border-bo-orange text-bo-orange hover:bg-bo-orange hover:text-white">
-                Voir toutes les entités
-                <ArrowRight className="ml-2" size={16} />
-              </Button>
-            </Link>
-          </div>
-        </div>
-
-        {/* Advantages Preview */}
-        <div className="bg-bo-dark rounded-2xl p-12 text-white">
-          <h3 className="text-3xl font-bold text-center mb-12">
-            Nos <span className="text-bo-orange">Avantages Concurrentiels</span>
-          </h3>
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
-            {advantages.slice(0, 4).map((advantage, index) => (
-              <div key={index} className="flex items-start space-x-3">
-                <div className="w-2 h-2 bg-bo-orange rounded-full mt-2 flex-shrink-0"></div>
-                <p className="text-gray-200">{advantage}</p>
-              </div>
-            ))}
-          </div>
-          
-          <div className="text-center">
-            <Link to="/about">
-              <Button variant="outline" className="border-white text-bo-dark hover:bg-white hover:text-bo-dark">
-                Découvrir tous nos avantages
-                <ArrowRight className="ml-2" size={16} />
-              </Button>
-            </Link>
-          </div>
-        </div>
+        </AnimatedSection>
       </div>
     </section>
   );
