@@ -104,57 +104,31 @@ export default {
 						transform: "translateY(0)"
 					}
 				},
-				'float': {
-					'0%, 100%': { transform: 'translateY(0px) rotate(0deg)' },
-					'50%': { transform: 'translateY(-10px) rotate(3deg)' }
-				},
 				'slide-in-left': {
-					'0%': { transform: 'translateX(-100px)', opacity: '0' },
+					'0%': { transform: 'translateX(-30px)', opacity: '0' },
 					'100%': { transform: 'translateX(0)', opacity: '1' }
 				},
 				'slide-in-right': {
-					'0%': { transform: 'translateX(100px)', opacity: '0' },
+					'0%': { transform: 'translateX(30px)', opacity: '0' },
 					'100%': { transform: 'translateX(0)', opacity: '1' }
 				},
 				'slide-in-up': {
-					'0%': { transform: 'translateY(100px)', opacity: '0' },
-					'100%': { transform: 'translateY(0)', opacity: '1' }
-				},
-				'slide-in-down': {
-					'0%': { transform: 'translateY(-100px)', opacity: '0' },
+					'0%': { transform: 'translateY(30px)', opacity: '0' },
 					'100%': { transform: 'translateY(0)', opacity: '1' }
 				},
 				'scale-in': {
-					'0%': { transform: 'scale(0.8)', opacity: '0' },
+					'0%': { transform: 'scale(0.95)', opacity: '0' },
 					'100%': { transform: 'scale(1)', opacity: '1' }
-				},
-				'rotate-in': {
-					'0%': { transform: 'rotate(-180deg) scale(0.8)', opacity: '0' },
-					'100%': { transform: 'rotate(0deg) scale(1)', opacity: '1' }
-				},
-				'pulse-glow': {
-					'0%, 100%': { boxShadow: '0 0 0 0 rgba(232, 88, 22, 0.4)' },
-					'50%': { boxShadow: '0 0 0 20px rgba(232, 88, 22, 0)' }
-				},
-				'gradient-shift': {
-					'0%': { backgroundPosition: '0% 50%' },
-					'50%': { backgroundPosition: '100% 50%' },
-					'100%': { backgroundPosition: '0% 50%' }
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
 				'accordion-up': 'accordion-up 0.2s ease-out',
 				'fade-in': 'fade-in 0.6s ease-out',
-				'float': 'float 6s ease-in-out infinite',
-				'slide-in-left': 'slide-in-left 0.8s ease-out forwards',
-				'slide-in-right': 'slide-in-right 0.8s ease-out forwards',
-				'slide-in-up': 'slide-in-up 0.8s ease-out forwards',
-				'slide-in-down': 'slide-in-down 0.8s ease-out forwards',
-				'scale-in': 'scale-in 0.6s ease-out forwards',
-				'rotate-in': 'rotate-in 0.8s ease-out forwards',
-				'pulse-glow': 'pulse-glow 2s infinite',
-				'gradient-shift': 'gradient-shift 8s ease infinite'
+				'slide-in-left': 'slide-in-left 0.6s ease-out',
+				'slide-in-right': 'slide-in-right 0.6s ease-out',
+				'slide-in-up': 'slide-in-up 0.6s ease-out',
+				'scale-in': 'scale-in 0.4s ease-out'
 			}
 		}
 	},

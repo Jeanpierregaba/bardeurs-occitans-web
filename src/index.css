@@ -98,159 +98,71 @@
   }
 }
 
-/* Animations personnalisées */
-@keyframes float {
-  0%, 100% { transform: translateY(0px) rotate(0deg); }
-  50% { transform: translateY(-10px) rotate(3deg); }
+/* Animations professionnelles simplifiées */
+@keyframes fadeIn {
+  0% { opacity: 0; transform: translateY(10px); }
+  100% { opacity: 1; transform: translateY(0); }
 }
 
 @keyframes slideInLeft {
-  0% { transform: translateX(-100px); opacity: 0; }
+  0% { transform: translateX(-30px); opacity: 0; }
   100% { transform: translateX(0); opacity: 1; }
 }
 
 @keyframes slideInRight {
-  0% { transform: translateX(100px); opacity: 0; }
+  0% { transform: translateX(30px); opacity: 0; }
   100% { transform: translateX(0); opacity: 1; }
 }
 
 @keyframes slideInUp {
-  0% { transform: translateY(100px); opacity: 0; }
-  100% { transform: translateY(0); opacity: 1; }
-}
-
-@keyframes slideInDown {
-  0% { transform: translateY(-100px); opacity: 0; }
+  0% { transform: translateY(30px); opacity: 0; }
   100% { transform: translateY(0); opacity: 1; }
 }
 
 @keyframes scaleIn {
-  0% { transform: scale(0.8); opacity: 0; }
+  0% { transform: scale(0.95); opacity: 0; }
   100% { transform: scale(1); opacity: 1; }
 }
 
-@keyframes rotateIn {
-  0% { transform: rotate(-180deg) scale(0.8); opacity: 0; }
-  100% { transform: rotate(0deg) scale(1); opacity: 1; }
-}
-
-@keyframes pulseGlow {
-  0%, 100% { box-shadow: 0 0 0 0 rgba(232, 88, 22, 0.4); }
-  50% { box-shadow: 0 0 0 20px rgba(232, 88, 22, 0); }
-}
-
-@keyframes gradientShift {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
-}
-
 /* Classes utilitaires d'animation */
-.animate-float {
-  animation: float 6s ease-in-out infinite;
+.animate-fade-in {
+  animation: fadeIn 0.6s ease-out;
 }
 
 .animate-slide-in-left {
-  animation: slideInLeft 0.8s ease-out forwards;
+  animation: slideInLeft 0.6s ease-out;
 }
 
 .animate-slide-in-right {
-  animation: slideInRight 0.8s ease-out forwards;
+  animation: slideInRight 0.6s ease-out;
 }
 
 .animate-slide-in-up {
-  animation: slideInUp 0.8s ease-out forwards;
-}
-
-.animate-slide-in-down {
-  animation: slideInDown 0.8s ease-out forwards;
+  animation: slideInUp 0.6s ease-out;
 }
 
 .animate-scale-in {
-  animation: scaleIn 0.6s ease-out forwards;
+  animation: scaleIn 0.4s ease-out;
 }
 
-.animate-rotate-in {
-  animation: rotateIn 0.8s ease-out forwards;
-}
-
-.animate-pulse-glow {
-  animation: pulseGlow 2s infinite;
-}
-
-.animate-gradient {
-  background-size: 400% 400%;
-  animation: gradientShift 8s ease infinite;
-}
-
-/* Effets de hover avancés */
+/* Effets de hover professionnels */
 .hover-lift {
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 0.2s ease;
 }
 
 .hover-lift:hover {
-  transform: translateY(-8px) scale(1.02);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-}
-
-.hover-glow {
-  transition: all 0.3s ease;
-  position: relative;
-  overflow: hidden;
-}
-
-.hover-glow::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
-  transition: left 0.5s;
-}
-
-.hover-glow:hover::before {
-  left: 100%;
+  transform: translateY(-4px);
 }
 
 .hover-scale {
-  transition: transform 0.3s ease;
+  transition: transform 0.2s ease;
 }
 
 .hover-scale:hover {
-  transform: scale(1.05);
+  transform: scale(1.02);
 }
 
-.hover-rotate {
-  transition: transform 0.3s ease;
-}
-
-.hover-rotate:hover {
-  transform: rotate(5deg);
-}
-
-/* Staggered animations pour les listes */
-.stagger-animation > * {
-  opacity: 0;
-  transform: translateY(30px);
-  animation: slideInUp 0.6s ease-out forwards;
-}
-
-.stagger-animation > *:nth-child(1) { animation-delay: 0.1s; }
-.stagger-animation > *:nth-child(2) { animation-delay: 0.2s; }
-.stagger-animation > *:nth-child(3) { animation-delay: 0.3s; }
-.stagger-animation > *:nth-child(4) { animation-delay: 0.4s; }
-.stagger-animation > *:nth-child(5) { animation-delay: 0.5s; }
-.stagger-animation > *:nth-child(6) { animation-delay: 0.6s; }
-
-/* Effets de parallaxe */
-.parallax-slow {
-  transform: translateZ(0);
-  will-change: transform;
-}
-
-/* Scrollbar personnalisée avec animations */
+/* Scrollbar personnalisée */
 ::-webkit-scrollbar {
   width: 8px;
 }
@@ -267,16 +179,4 @@
 
 ::-webkit-scrollbar-thumb:hover {
   background: #d14a0f;
-}
-
-/* Indicateur de progression de lecture */
-.reading-progress {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 0%;
-  height: 3px;
-  background: linear-gradient(90deg, #e85816, #592516);
-  z-index: 9999;
-  transition: width 0.2s ease;
 }

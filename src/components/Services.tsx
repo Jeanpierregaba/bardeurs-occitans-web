@@ -38,10 +38,10 @@ const Services = () => {
     <section id="activites" className="py-20 bg-gray-50">
       <div className="container mx-auto px-4">
         {/* Section Header */}
-        <AnimatedSection animation="slide-up">
+        <AnimatedSection animation="fade">
           <div className="text-center mb-16">
             <h2 className="text-4xl lg:text-5xl font-bold text-bo-dark mb-6">
-              Nos <span className="text-bo-orange bg-gradient-to-r from-bo-orange to-orange-400 bg-clip-text text-transparent">Activités</span>
+              Nos <span className="text-bo-orange">Activités</span>
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
               Spécialisés dans le bardage métallique et l'étanchéité, nous apportons 
@@ -53,31 +53,29 @@ const Services = () => {
         {/* Services Grid */}
         <div className="grid lg:grid-cols-2 gap-8 mb-16">
           {services.map((service, index) => (
-            <AnimatedSection key={index} animation={index % 2 === 0 ? 'slide-left' : 'slide-right'} delay={index * 200}>
-              <Card className="overflow-hidden hover:shadow-xl transition-all duration-500 hover-lift group">
-                <div className={`h-48 ${service.image} flex items-center justify-center group-hover:scale-105 transition-transform duration-500`}>
-                  <div className="animate-float group-hover:scale-110 transition-transform duration-300">
-                    {service.icon}
-                  </div>
+            <AnimatedSection key={index} animation="slide-up" delay={index * 100}>
+              <Card className="overflow-hidden hover:shadow-lg transition-shadow duration-300 hover-lift">
+                <div className={`h-48 ${service.image} flex items-center justify-center`}>
+                  {service.icon}
                 </div>
                 
                 <CardContent className="p-8">
-                  <h3 className="text-2xl font-bold text-bo-dark mb-4 group-hover:text-bo-orange transition-colors duration-300">{service.title}</h3>
+                  <h3 className="text-2xl font-bold text-bo-dark mb-4">{service.title}</h3>
                   <p className="text-gray-600 mb-6 leading-relaxed">{service.description}</p>
                   
-                  <ul className="space-y-3 mb-8 stagger-animation">
+                  <ul className="space-y-3 mb-8">
                     {service.features.map((feature, idx) => (
                       <li key={idx} className="flex items-center space-x-3">
-                        <CheckCircle className="text-bo-orange flex-shrink-0 hover-scale" size={20} />
+                        <CheckCircle className="text-bo-orange flex-shrink-0" size={20} />
                         <span className="text-gray-700">{feature}</span>
                       </li>
                     ))}
                   </ul>
                   
                   <Link to="/services">
-                    <Button className="bg-bo-orange hover:bg-bo-orange/90 text-white w-full hover-glow group">
+                    <Button className="bg-bo-orange hover:bg-bo-orange/90 text-white w-full">
                       En savoir plus
-                      <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" size={16} />
+                      <ArrowRight className="ml-2" size={16} />
                     </Button>
                   </Link>
                 </CardContent>
@@ -88,7 +86,7 @@ const Services = () => {
 
         {/* CTA Section */}
         <AnimatedSection animation="scale">
-          <div className="text-center bg-gradient-to-r from-bo-dark to-bo-blue rounded-2xl p-12 text-white hover-lift animate-gradient">
+          <div className="text-center bg-gradient-to-r from-bo-dark to-bo-blue rounded-2xl p-12 text-white">
             <h3 className="text-3xl font-bold mb-4">
               Un projet en tête ?
             </h3>
@@ -96,9 +94,9 @@ const Services = () => {
               Contactez-nous pour une étude personnalisée et un devis gratuit
             </p>
             <Link to="/contact">
-              <Button size="lg" className="bg-bo-orange hover:bg-bo-orange/90 text-white animate-pulse-glow hover-scale group">
+              <Button size="lg" className="bg-bo-orange hover:bg-bo-orange/90 text-white hover-scale">
                 Demander un devis gratuit
-                <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" size={20} />
+                <ArrowRight className="ml-2" size={20} />
               </Button>
             </Link>
           </div>
