@@ -45,7 +45,7 @@ const Services = () => {
               Nos <span className="text-bo-orange">Activités</span>
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            Spécialisés en bardage (métallique, bois, composite) et en étanchéité (bitume et membrane PVC), nous intervenons sur des projets neufs ou en rénovation pour améliorer la performance énergétique, l’esthétique et la durabilité de vos bâtiments.
+            Spécialisés en bardage (métallique, bois, composite) et en étanchéité (bitume et membrane PVC), nous intervenons sur des projets neufs ou en rénovation pour améliorer la performance énergétique, l'esthétique et la durabilité de vos bâtiments.
             </p>
           </div>
         </AnimatedSection>

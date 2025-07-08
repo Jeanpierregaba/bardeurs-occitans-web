@@ -1,4 +1,3 @@
-
 import React from 'react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
@@ -163,7 +162,7 @@ const Services = () => {
               </div>
               
               <Card className="overflow-hidden shadow-2xl hover-lift">
-                <img src="./src/assets/bardage-1x.jpg" alt="" className='w-full object-cover' />
+                <img src="/images/bardage.jpg" alt="" className='w-full object-cover' />
                 <CardContent className="p-8">
                   <h4 className="text-xl font-bold text-bo-dark mb-4 flex items-center">
                     <Zap className="text-bo-orange mr-2" size={24} />
@@ -244,7 +243,7 @@ const Services = () => {
           <div className="container mx-auto px-10">
             <div className="grid lg:grid-cols-2 gap-12 items-start">
               <Card className="overflow-hidden shadow-2xl hover-lift lg:order-2">
-              <img src="./src/assets/bitume-1x.jpg" alt="" className='w-full object-cover' />
+              <img src="/images/etancheite-1.jpg" alt="" className='w-full object-cover' />
                 <CardContent className="p-8">
                   <h4 className="text-xl font-bold text-bo-dark mb-4 flex items-center">
                     <Shield className="text-bo-orange mr-2" size={24} />

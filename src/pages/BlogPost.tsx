@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { useParams, Link } from 'react-router-dom';
 import Header from '@/components/Header';
@@ -35,7 +34,7 @@ const BlogPost = () => {
     author: "Nicolas Ferasse",
     category: "Bardage",
     readTime: "5 min",
-    image: "bg-gradient-to-br from-gray-300 to-gray-400"
+    image: "/images/blog-1.jpg"
   };
 
   return (
@@ -88,8 +87,8 @@ const BlogPost = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             {/* Featured Image */}
-            <div className={`h-96 ${article.image} rounded-2xl mb-12 flex items-center justify-center`}>
-              <div className="text-white text-xl font-semibold">Image de l'article</div>
+            <div className="mb-12">
+              <img src={article.image} alt="" className="w-full h-96 object-cover rounded-2xl" />
             </div>
             
             {/* Article Content */}
