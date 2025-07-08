@@ -1,3 +1,4 @@
+
 import React from 'react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
@@ -5,6 +6,18 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { ArrowRight, MapPin, Calendar, Users, Award } from 'lucide-react';
+import gymnaseLegevin1x from '@/assets/gymnase-legevin-1x.jpg';
+import gymnaseLegevin2x from '@/assets/gymnase-legevin-2x.JPG';
+import trescal1x from '@/assets/trescal-1x.jpg';
+import trescal2x from '@/assets/trescal-2x.JPG';
+import sdis1x from '@/assets/sdis-1x.jpg';
+import sdis2x from '@/assets/sdis-2x.PNG';
+import muret1x from '@/assets/Muret-1x.jpg';
+import muret2x from '@/assets/Muret-2x.jpg';
+import rive1x from '@/assets/Rive-1x.jpg';
+import rive2x from '@/assets/Rive-2x.jpg';
+import grenade1x from '@/assets/grenade-1x.JPG';
+import grenade2x from '@/assets/grenade-2x.JPG';
 
 const Realisations = () => {
   const projects = [
@@ -15,8 +28,8 @@ const Realisations = () => {
       type: "Bardage",
       duration: "3 mois",
       description: "Bardage métallique double peau avec intégration de panneaux en polycarbonate coloré pour valoriser l'esthétique du nouveau gymnase municipal. Isolation thermique renforcée et rendu architectural moderne.",
-      beforeImage: "/images/gymnase-legevin-1x.jpg",
-      afterImage: "/images/gymnase-legevin-2x.jpg",
+      beforeImage: gymnaseLegevin1x,
+      afterImage: gymnaseLegevin2x,
       featured: true
     },
     {
@@ -26,8 +39,8 @@ const Realisations = () => {
       type: "Rénovation Énergétique",
       duration: "4 mois",
       description: "Rénovation complète des façades avec un bardage double peau métallique visant à améliorer les performances énergétiques et moderniser l'image du bâtiment tout en assurant une exécution en site occupé",
-      beforeImage: "/images/trescal-1x.jpg",
-      afterImage: "/images/trescal-2x.jpg",
+      beforeImage: trescal1x,
+      afterImage: trescal2x,
       featured: true
     },
     {
@@ -37,8 +50,8 @@ const Realisations = () => {
       type: "Bâtiment public – SDIS",
       duration: "4 mois",
       description: "Pose d'un bardage métallique double peau sur charpente métallique dans le cadre de la construction d'un nouveau centre d'intervention. Un projet technique alliant performance thermique et robustesse des matériaux. ",
-      beforeImage: "/images/sdis-1x.jpg",
-      afterImage: "/images/sdis-2x.png",
+      beforeImage: sdis1x,
+      afterImage: sdis2x,
       featured: true
     },
     {
@@ -48,8 +61,8 @@ const Realisations = () => {
       type: "Étanchéité",
       duration: "3 mois",
       description: "Réfection complète de l'étanchéité bitumineuse avec mise en place d'un isolant thermique et pose de gravillons pour la protection de la membrane.",
-      beforeImage: "/images/Muret-1x.jpg",
-      afterImage: "/images/Muret-2x.jpg",
+      beforeImage: muret1x,
+      afterImage: muret2x,
       featured: false
     },
     {
@@ -59,8 +72,8 @@ const Realisations = () => {
       type: "Étanchéité – Couvertines",
       duration: "1 mois",
       description: "Recherche de fuite sur toiture terrasse suivie du remplacement des couvertines en tête d'acrotères et modernisation de l'ensemble de l'ouvrage.",
-      beforeImage: "/images/Rive-1x.jpg",
-      afterImage: "/images/Rive-2x.jpg",
+      beforeImage: rive1x,
+      afterImage: rive2x,
       featured: false
     },
     {
@@ -70,8 +83,8 @@ const Realisations = () => {
       type: "Bardage Bois + Métallique",
       duration: "6 mois",
       description: "Pose d'un complexe mixte en bardage bois et métallique sur bâtiment neuf destiné au SDIS 31. Rendu esthétique et technique pour une enveloppe performante.",
-      beforeImage: "/images/grenade-1x.jpg",
-      afterImage: "/images/grenade-2x.jpg",
+      beforeImage: grenade1x,
+      afterImage: grenade2x,
       featured: false
     }
   ];

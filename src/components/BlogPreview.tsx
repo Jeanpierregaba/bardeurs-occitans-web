@@ -4,6 +4,9 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Calendar, User, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import blog1 from '@/assets/blog-1.jpg';
+import blog2 from '@/assets/blog-2.jpg';
+import blog3 from '@/assets/blog-3.jpg';
 
 const BlogPreview = () => {
   const articles = [
@@ -14,7 +17,7 @@ const BlogPreview = () => {
       date: "15 mars 2024",
       author: "Nicolas Ferasse",
       category: "Bardage",
-      image: "/images/blog-1.jpg",
+      image: blog1,
       readTime: "5 min"
     },
     {
@@ -24,7 +27,7 @@ const BlogPreview = () => {
       date: "8 mars 2024",
       author: "Équipe Bardeurs Occitans",
       category: "Étanchéité",
-      image: "/images/blog-2.jpg",
+      image: blog2,
       readTime: "7 min"
     },
     {
@@ -34,7 +37,7 @@ const BlogPreview = () => {
       date: "1 mars 2024",
       author: "Nicolas Ferasse",
       category: "Rénovation",
-      image: "/images/blog-3.jpg",
+      image: blog3,
       readTime: "6 min"
     }
   ];

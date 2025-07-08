@@ -5,6 +5,8 @@ import { Button } from '@/components/ui/button';
 import { Wrench, Droplets, ArrowRight, CheckCircle } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import AnimatedSection from './AnimatedSection';
+import bardageImage from '@/assets/bardage.JPG';
+import etancheiteImage from '@/assets/etancheite-1.jpg';
 
 const Services = () => {
   const services = [
@@ -18,7 +20,7 @@ const Services = () => {
         "Bardage conforme aux normes DTU et exigences de la rénovation énergétique",
         "Accompagnement complet : conception, fourniture et installation par des professionnels qualifiés"
       ],
-      image: "/images/bardage.jpg"
+      image: bardageImage
     },
     {
       icon: <Droplets className="text-bo-orange" size={48} />,
@@ -31,7 +33,7 @@ const Services = () => {
         "Entretien, diagnostic et maintenance préventive",
         "Interventions sur bâtiments occupés avec gestion des contraintes de chantier"
       ],
-      image: "/images/etancheite-1.jpg"
+      image: etancheiteImage
     }
   ];
 
@@ -55,8 +57,8 @@ const Services = () => {
           {services.map((service, index) => (
             <AnimatedSection key={index} animation="slide-up" delay={index * 100}>
               <Card className="overflow-hidden hover:shadow-lg transition-shadow duration-300 hover-lift">
-                <div className={`h-75 ${service.image} flex items-center justify-center`}>
-                  <img src={service.image} alt=""/>
+                <div className="h-75 flex items-center justify-center">
+                  <img src={service.image} alt="" />
                 </div>
                 
                 <CardContent className="p-8">

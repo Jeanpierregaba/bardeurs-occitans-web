@@ -4,6 +4,8 @@ import { Button } from '@/components/ui/button';
 import { ArrowRight, Shield } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import AnimatedSection from './AnimatedSection';
+import heroImage from '@/assets/hero-image.JPG';
+import logoRgeQualibat from '@/assets/logo-rge-qualibat.png';
 
 const Hero = () => {
   return (
@@ -57,14 +59,14 @@ const Hero = () => {
           <AnimatedSection animation="slide-left" delay={300}>
             <div className="relative">
               <div className="bg-gradient-to-br from-bo-orange/20 to-bo-blue/20 rounded-2xl p-8 backdrop-blur-sm border border-white/10">
-              <img src="/images/hero-image.jpg" alt="" className='rounded-2xl' />
+              <img src={heroImage} alt="" className='rounded-2xl' />
               </div>
 
               {/* Floating Cards */}
 
               <div className="absolute -bottom-6 -left-6 bg-white rounded-lg p-2 shadow-xl">
                 <div className="text-center">
-                  <img src="/images/logo-rge-qualibat.png" alt="" width={75} height={75}/>
+                  <img src={logoRgeQualibat} alt="" width={75} height={75}/>
                 </div>
               </div>
             </div>

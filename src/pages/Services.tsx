@@ -1,3 +1,4 @@
+
 import React from 'react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
@@ -7,6 +8,8 @@ import { Badge } from '@/components/ui/badge';
 import { Wrench, Droplets, ArrowRight, CheckCircle, Shield, Award, Users, Building, Zap, Clock, Recycle } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import AnimatedSection from '@/components/AnimatedSection';
+import bardageImage from '@/assets/bardage.JPG';
+import etancheiteImage from '@/assets/etancheite-1.jpg';
 
 const Services = () => {
   const bardageTypes = [
@@ -162,7 +165,7 @@ const Services = () => {
               </div>
               
               <Card className="overflow-hidden shadow-2xl hover-lift">
-                <img src="/images/bardage.jpg" alt="" className='w-full object-cover' />
+                <img src={bardageImage} alt="" className='w-full object-cover' />
                 <CardContent className="p-8">
                   <h4 className="text-xl font-bold text-bo-dark mb-4 flex items-center">
                     <Zap className="text-bo-orange mr-2" size={24} />
@@ -243,7 +246,7 @@ const Services = () => {
           <div className="container mx-auto px-10">
             <div className="grid lg:grid-cols-2 gap-12 items-start">
               <Card className="overflow-hidden shadow-2xl hover-lift lg:order-2">
-              <img src="/images/etancheite-1.jpg" alt="" className='w-full object-cover' />
+              <img src={etancheiteImage} alt="" className='w-full object-cover' />
                 <CardContent className="p-8">
                   <h4 className="text-xl font-bold text-bo-dark mb-4 flex items-center">
                     <Shield className="text-bo-orange mr-2" size={24} />

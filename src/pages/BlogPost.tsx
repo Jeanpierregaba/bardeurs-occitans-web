@@ -1,9 +1,11 @@
+
 import React from 'react';
 import { useParams, Link } from 'react-router-dom';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { Button } from '@/components/ui/button';
 import { Calendar, User, ArrowLeft, Share2 } from 'lucide-react';
+import blog1 from '@/assets/blog-1.jpg';
 
 const BlogPost = () => {
   const { id } = useParams();
@@ -34,7 +36,7 @@ const BlogPost = () => {
     author: "Nicolas Ferasse",
     category: "Bardage",
     readTime: "5 min",
-    image: "/images/blog-1.jpg"
+    image: blog1
   };
 
   return (
