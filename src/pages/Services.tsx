@@ -105,19 +105,18 @@ const Services = () => {
       {/* Bardage Section */}
       <AnimatedSection animation="slide-left">
         <section className="py-20">
-          <div className="container mx-auto px-4">
+          <div className="container mx-auto px-10">
             <div className="grid lg:grid-cols-2 gap-12 items-start">
               <div>
                 <div className="flex items-center mb-6">
-                  <Wrench className="text-bo-orange mr-4" size={48} />
-                  <h2 className="text-4xl font-bold text-bo-dark">Bardage Métallique</h2>
+                  <h2 className="text-4xl font-bold text-bo-dark">Bardage</h2>
                 </div>
                 
-                <Badge className="bg-bo-orange/20 text-bo-orange mb-6 text-lg px-4 py-2">
-                  🏗 Une solution technique, durable et esthétique pour vos façades
-                </Badge>
+                <span className="text-bo-orange text-lg font-semibold">
+                  Une solution technique, durable et esthétique pour vos façades
+                </span>
                 
-                <p className="text-lg text-gray-600 mb-8 leading-relaxed">
+                <p className="text-lg text-gray-600 my-5 leading-relaxed">
                   Chez Bardeurs Occitans, nous mettons notre savoir-faire au service de vos projets en bardage 
                   métallique, en construction neuve comme en rénovation. Grâce à des matériaux certifiés et une pose 
                   experte, nous garantissons une isolation thermique performante, une protection optimale contre les 
@@ -164,9 +163,7 @@ const Services = () => {
               </div>
               
               <Card className="overflow-hidden shadow-2xl hover-lift">
-                <div className="bg-gradient-to-br from-gray-300 to-gray-400 h-80 flex items-center justify-center">
-                  <Wrench className="text-white animate-pulse" size={80} />
-                </div>
+                <img src="./src/assets/bardage-1x.jpg" alt="" className='w-full object-cover' />
                 <CardContent className="p-8">
                   <h4 className="text-xl font-bold text-bo-dark mb-4 flex items-center">
                     <Zap className="text-bo-orange mr-2" size={24} />
@@ -244,12 +241,10 @@ const Services = () => {
       {/* Étanchéité Section */}
       <AnimatedSection animation="slide-right">
         <section className="py-20 bg-gray-50">
-          <div className="container mx-auto px-4">
+          <div className="container mx-auto px-10">
             <div className="grid lg:grid-cols-2 gap-12 items-start">
               <Card className="overflow-hidden shadow-2xl hover-lift lg:order-2">
-                <div className="bg-gradient-to-br from-blue-200 to-blue-300 h-80 flex items-center justify-center">
-                  <Droplets className="text-white animate-pulse" size={80} />
-                </div>
+              <img src="./src/assets/bitume-1x.jpg" alt="" className='w-full object-cover' />
                 <CardContent className="p-8">
                   <h4 className="text-xl font-bold text-bo-dark mb-4 flex items-center">
                     <Shield className="text-bo-orange mr-2" size={24} />
@@ -278,15 +273,15 @@ const Services = () => {
 
               <div className="lg:order-1">
                 <div className="flex items-center mb-6">
-                  <Droplets className="text-bo-orange mr-4" size={48} />
                   <h2 className="text-4xl font-bold text-bo-dark">Étanchéité</h2>
                 </div>
                 
-                <Badge className="bg-blue-100 text-blue-700 mb-6 text-lg px-4 py-2">
-                  🔒 Protégez durablement vos bâtiments contre les infiltrations
-                </Badge>
+                <span className="text-bo-orange text-lg font-semibold">
+                  Protégez durablement vos bâtiments contre les infiltrations
+                </span>
                 
-                <p className="text-lg text-gray-600 mb-8 leading-relaxed">
+                
+                <p className="text-lg text-gray-600 my-5 leading-relaxed">
                   Depuis plus de 5 ans, Bardeurs Occitans réalise des travaux d'étanchéité pour les 
                   toitures-terrasses, les zones sensibles et les bâtiments industriels ou tertiaires. Nous utilisons des 
                   solutions éprouvées (bitume bicouche, membrane PVC, SEL) pour garantir une étanchéité parfaite, 
@@ -334,7 +329,7 @@ const Services = () => {
 
             <div className="text-center mt-12">
               <p className="text-lg text-gray-600 mb-4">
-                👷 <strong>Un doute sur l'état de votre toiture ?</strong>
+                 <strong>Un doute sur l'état de votre toiture ?</strong>
               </p>
               <p className="text-gray-600 mb-6">
                 Nos équipes réalisent un diagnostic précis et sans engagement pour évaluer vos besoins et vous 
@@ -370,7 +365,7 @@ const Services = () => {
                 </Button>
               </Link>
               <Link to="/realisations">
-                <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-bo-dark hover-scale">
+                <Button size="lg" variant="outline" className="border-white text-bo-dark hover:bg-white hover:text-bo-dark hover-scale">
                   Voir nos réalisations
                 </Button>
               </Link>

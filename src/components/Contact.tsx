@@ -10,7 +10,7 @@ const Contact = () => {
     {
       icon: <Phone className="text-bo-orange" size={24} />,
       title: "Téléphone",
-      content: "05 XX XX XX XX",
+      content: "05 61 95 62 11",
       subtitle: "Lun - Ven : 8h - 18h"
     },
     {
@@ -35,7 +35,7 @@ const Contact = () => {
 
   return (
     <section id="contact" className="py-20 bg-white">
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-10">
         {/* Section Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl lg:text-5xl font-bold text-bo-dark mb-6">
@@ -90,8 +90,8 @@ const Contact = () => {
                   
                   <div className="text-center text-sm text-gray-500">
                     <p>ou appelez-nous directement</p>
-                    <a href="tel:05XXXXXXXX" className="text-bo-orange font-semibold hover:underline">
-                      05 XX XX XX XX
+                    <a href="tel:0561956211" className="text-bo-orange font-semibold hover:underline">
+                      05 61 95 62 11
                     </a>
                   </div>
                 </div>

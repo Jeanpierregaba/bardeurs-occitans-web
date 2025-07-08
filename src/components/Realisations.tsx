@@ -10,31 +10,31 @@ import AnimatedSection from './AnimatedSection';
 const Realisations = () => {
   const projects = [
     {
-      title: "Rénovation Complexe Industriel",
+      title: "Gymnase de Léguevin",
       location: "Toulouse",
-      year: "2024",
-      type: "Bardage métallique",
-      description: "Rénovation complète de la façade avec bardage métallique haute performance et isolation thermique renforcée.",
-      beforeImage: "bg-gradient-to-br from-red-200 to-red-300",
-      afterImage: "bg-gradient-to-br from-green-200 to-green-300"
+      year: "2025",
+      type: "Bardage",
+      description: "Bardage métallique double peau avec intégration de panneaux en polycarbonate coloré pour valoriser l’esthétique du nouveau gymnase municipal. Isolation thermique renforcée et rendu architectural moderne.",
+      beforeImage: "./src/assets/gymnase-legevin-1x.jpg",
+      afterImage: "./src/assets/gymnase-legevin-2x.jpg"
     },
     {
-      title: "Étanchéité Bâtiment Tertiaire",
-      location: "Colomiers",
-      year: "2024",
-      type: "Étanchéité",
-      description: "Traitement complet de l'étanchéité toiture terrasse avec système d'évacuation des eaux pluviales.",
-      beforeImage: "bg-gradient-to-br from-gray-200 to-gray-400",
-      afterImage: "bg-gradient-to-br from-blue-200 to-blue-300"
+      title: "Site industriel Trescal",
+      location: "Toulouse",
+      year: "2025",
+      type: "Rénovation Énergétique",
+      description: "Rénovation complète des façades avec un bardage double peau métallique visant à améliorer les performances énergétiques et moderniser l’image du bâtiment tout en assurant une exécution en site occupé",
+      beforeImage: "./src/assets/trescal-1x.jpg",
+      afterImage: "./src/assets/trescal-2x.jpg"
     },
     {
-      title: "Centre Commercial",
-      location: "Blagnac",
-      year: "2023",
-      type: "Bardage + Étanchéité",
-      description: "Projet complet alliant bardage métallique moderne et système d'étanchéité haute technologie.",
-      beforeImage: "bg-gradient-to-br from-orange-200 to-orange-300",
-      afterImage: "bg-gradient-to-br from-purple-200 to-purple-300"
+      title: "Centre de secours SDIS 34",
+      location: "Gignac",
+      year: "2025",
+      type: "Bâtiment public – SDIS",
+      description: "Pose d’un bardage métallique double peau sur charpente métallique dans le cadre de la construction d’un nouveau centre d’intervention. Un projet technique alliant performance thermique et robustesse des matériaux. ",
+      beforeImage: "./src/assets/sdis-1x.jpg",
+      afterImage: "./src/assets/sdis-2x.png"
     }
   ];
 
@@ -55,26 +55,24 @@ const Realisations = () => {
         </AnimatedSection>
 
         {/* Projects Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16 stagger-animation">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16 stagger-animation px-10">
           {projects.map((project, index) => (
             <Card key={index} className="overflow-hidden hover:shadow-xl transition-all duration-500 hover-lift group">
               {/* Before/After Images */}
               <div className="relative h-64 overflow-hidden">
                 <div className="absolute inset-0 grid grid-cols-2">
-                  <div className={`${project.beforeImage} flex items-center justify-center relative group-hover:scale-105 transition-transform duration-700`}>
+                  <img src={project.beforeImage} alt="" className='w-full h-full object-cover group-hover:scale-105 transition-transform duration-700' />
                     <div className="absolute top-2 left-2">
                       <Badge variant="secondary" className="bg-red-100 text-red-800 animate-slide-in-left">
                         Avant
                       </Badge>
                     </div>
-                  </div>
-                  <div className={`${project.afterImage} flex items-center justify-center relative group-hover:scale-105 transition-transform duration-700`}>
+                  <img src={project.afterImage} alt="" className='w-full h-full object-cover group-hover:scale-105 transition-transform duration-700'/>
                     <div className="absolute top-2 right-2">
                       <Badge variant="secondary" className="bg-green-100 text-green-800 animate-slide-in-right">
                         Après
                       </Badge>
                     </div>
-                  </div>
                 </div>
                 <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-black/50 to-transparent"></div>
               </div>

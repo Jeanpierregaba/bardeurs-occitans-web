@@ -10,21 +10,14 @@ import { ArrowRight, MapPin, Calendar, Users, Award } from 'lucide-react';
 const Realisations = () => {
   const projects = [
     {
-      title: "Rénovation Complexe Industriel Airbus",
+      title: "Gymnase de Léguevin",
       location: "Toulouse",
-      year: "2024",
-      type: "Bardage métallique",
-      surface: "2 500 m²",
+      year: "2025",
+      type: "Bardage",
       duration: "3 mois",
-      description: "Rénovation complète de la façade avec bardage métallique haute performance et isolation thermique renforcée. Projet complexe nécessitant une coordination précise avec les activités industrielles.",
-      challenges: [
-        "Travail en site sensible",
-        "Maintien de l'activité industrielle",
-        "Respect des normes aéronautiques",
-        "Isolation thermique renforcée"
-      ],
-      beforeImage: "bg-gradient-to-br from-red-200 to-red-300",
-      afterImage: "bg-gradient-to-br from-green-200 to-green-300",
+      description: "Bardage métallique double peau avec intégration de panneaux en polycarbonate coloré pour valoriser l’esthétique du nouveau gymnase municipal. Isolation thermique renforcée et rendu architectural moderne.",
+      beforeImage: "./src/assets/gymnase-legevin-1x.jpg",
+      afterImage: "./src/assets/gymnase-legevin-2x.jpg",
       featured: true
     },
     {
@@ -139,7 +132,7 @@ const Realisations = () => {
       
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-bo-dark via-bo-blue to-bo-dark text-white py-20">
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto px-10">
           <div className="text-center">
             <h1 className="text-5xl font-bold mb-6">
               Nos <span className="text-bo-orange">Réalisations</span>
@@ -154,7 +147,7 @@ const Realisations = () => {
 
       {/* Stats Section */}
       <section className="py-16 bg-gray-50">
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto px-10">
           <div className="grid md:grid-cols-3 gap-8">
             {stats.map((stat, index) => (
               <div key={index} className="text-center">
@@ -171,7 +164,7 @@ const Realisations = () => {
 
       {/* Featured Projects */}
       <section className="py-20">
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto px-10">
           <h2 className="text-4xl font-bold text-bo-dark text-center mb-16">
             Projets <span className="text-bo-orange">Phares</span>
           </h2>
@@ -254,7 +247,7 @@ const Realisations = () => {
 
       {/* All Projects Grid */}
       <section className="py-20 bg-gray-50">
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto px-10">
           <h2 className="text-4xl font-bold text-bo-dark text-center mb-16">
             Autres <span className="text-bo-orange">Réalisations</span>
           </h2>
@@ -319,7 +312,7 @@ const Realisations = () => {
 
       {/* CTA Section */}
       <section className="py-20 bg-bo-dark text-white">
-        <div className="container mx-auto px-4 text-center">
+        <div className="container mx-auto px-10 text-center">
           <h2 className="text-4xl font-bold mb-6">
             Votre projet sera notre prochaine réalisation
           </h2>

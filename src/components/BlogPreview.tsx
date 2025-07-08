@@ -14,7 +14,7 @@ const BlogPreview = () => {
       date: "15 mars 2024",
       author: "Nicolas Ferasse",
       category: "Bardage",
-      image: "bg-gradient-to-br from-gray-300 to-gray-400",
+      image: "./src/assets/blog-1.jpg",
       readTime: "5 min"
     },
     {
@@ -24,7 +24,7 @@ const BlogPreview = () => {
       date: "8 mars 2024",
       author: "Équipe Bardeurs Occitans",
       category: "Étanchéité",
-      image: "bg-gradient-to-br from-blue-200 to-blue-300",
+      image: "./src/assets/blog-2.jpg",
       readTime: "7 min"
     },
     {
@@ -34,7 +34,7 @@ const BlogPreview = () => {
       date: "1 mars 2024",
       author: "Nicolas Ferasse",
       category: "Rénovation",
-      image: "bg-gradient-to-br from-green-200 to-green-300",
+      image: "./src/assets/blog-3.jpg",
       readTime: "6 min"
     }
   ];
@@ -56,11 +56,7 @@ const BlogPreview = () => {
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {articles.map((article) => (
             <Card key={article.id} className="overflow-hidden hover:shadow-xl transition-shadow duration-300">
-              <div className={`h-48 ${article.image} flex items-center justify-center`}>
-                <div className="bg-bo-orange text-white px-3 py-1 rounded-full text-sm font-medium">
-                  {article.category}
-                </div>
-              </div>
+              <img src={article.image} alt="" className='w-full h-48 object-cover' />
               
               <CardHeader>
                 <CardTitle className="text-xl font-bold text-bo-dark">

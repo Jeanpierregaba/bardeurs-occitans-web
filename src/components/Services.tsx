@@ -10,33 +10,34 @@ const Services = () => {
   const services = [
     {
       icon: <Wrench className="text-bo-orange" size={48} />,
-      title: "Bardage Métallique",
-      description: "Solutions de bardage métallique haute performance pour l'isolation et l'esthétique de vos bâtiments.",
+      title: "Bardage",
+      description: "Nous proposons une large gamme de solutions de bardage adaptées à chaque bâtiment, en neuf comme en rénovation. Qu’il soit métallique, bois, composite ou en panneaux stratifiés, notre bardage améliore l’isolation, modernise l’apparence et protège durablement vos façades.",
       features: [
-        "Isolation thermique optimale",
-        "Matériaux certifiés DTU",
-        "Design moderne et durable",
-        "Installation professionnelle"
+        "Tous types de bardage: métallique, bois, composite, stratifié HPL, panneaux aluminium",
+        "Isolation thermique performante et réduction des ponts thermiques",
+        "Bardage conforme aux normes DTU et exigences de la rénovation énergétique",
+        "Accompagnement complet : conception, fourniture et installation par des professionnels qualifiés"
       ],
-      image: "bg-gradient-to-br from-gray-300 to-gray-400"
+      image: "./src/assets/bardage.jpg"
     },
     {
       icon: <Droplets className="text-bo-orange" size={48} />,
-      title: "Étanchéité",
-      description: "Expertise complète en étanchéité pour protéger durablement vos structures contre les infiltrations.",
+      title: "Étanchéité: protégez durablement vos bâtiments",
+      description: "Spécialistes de l’étanchéité des toitures-terrasses, nous utilisons des systèmes éprouvés (bitume ou membrane synthétique PVC) pour garantir une protection optimale contre les infiltrations, même en conditions extrêmes.",
       features: [
-        "Étanchéité toiture terrasse",
-        "Traitement anti-infiltration",
-        "Garanties longue durée",
-        "Suivi et maintenance"
+        "Étanchéité bitumineuse et membranes PVC soudées à chaud",
+        "Traitement anti-infiltration pour toitures plates, végétalisées ou accessibles",
+        "Garantie décennale et durabilité prouvée",
+        "Entretien, diagnostic et maintenance préventive",
+        "Interventions sur bâtiments occupés avec gestion des contraintes de chantier"
       ],
-      image: "bg-gradient-to-br from-blue-200 to-blue-300"
+      image: "./src/assets/etancheite-1.jpg"
     }
   ];
 
   return (
     <section id="activites" className="py-20 bg-gray-50">
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-10">
         {/* Section Header */}
         <AnimatedSection animation="fade">
           <div className="text-center mb-16">
@@ -44,8 +45,7 @@ const Services = () => {
               Nos <span className="text-bo-orange">Activités</span>
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-              Spécialisés dans le bardage métallique et l'étanchéité, nous apportons 
-              des solutions durables et performantes à vos projets de rénovation énergétique.
+            Spécialisés en bardage (métallique, bois, composite) et en étanchéité (bitume et membrane PVC), nous intervenons sur des projets neufs ou en rénovation pour améliorer la performance énergétique, l’esthétique et la durabilité de vos bâtiments.
             </p>
           </div>
         </AnimatedSection>
@@ -55,8 +55,8 @@ const Services = () => {
           {services.map((service, index) => (
             <AnimatedSection key={index} animation="slide-up" delay={index * 100}>
               <Card className="overflow-hidden hover:shadow-lg transition-shadow duration-300 hover-lift">
-                <div className={`h-48 ${service.image} flex items-center justify-center`}>
-                  {service.icon}
+                <div className={`h-75 ${service.image} flex items-center justify-center`}>
+                  <img src={service.image} alt=""/>
                 </div>
                 
                 <CardContent className="p-8">

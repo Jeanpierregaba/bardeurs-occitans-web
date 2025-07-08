@@ -35,7 +35,7 @@ const Header = () => {
           <div className="flex items-center space-x-4 animate-slide-in-left">
             <div className="flex items-center space-x-2 hover-glow">
               <Phone size={16} className="animate-float" />
-              <span>05 XX XX XX XX</span>
+              <span>05 61 95 62 11</span>
             </div>
             <div className="flex items-center space-x-2 hover-glow">
               <Mail size={16} className="animate-float" style={{ animationDelay: '1s' }} />
@@ -50,7 +50,7 @@ const Header = () => {
 
       {/* Main Header */}
       <header className={`bg-white shadow-lg sticky top-0 z-50 transition-all duration-300 ${isScrolled ? 'shadow-xl backdrop-blur-sm bg-white/95' : ''}`}>
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto px-10">
           <div className="flex justify-between items-center h-20">
             {/* Logo */}
             <div className="flex items-center">

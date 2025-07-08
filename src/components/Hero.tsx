@@ -15,7 +15,7 @@ const Hero = () => {
         <div className="absolute top-1/2 left-1/4 w-24 h-24 border border-bo-orange rounded-full"></div>
       </div>
 
-      <div className="container mx-auto px-4 relative z-10">
+      <div className="container mx-auto px-10 relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Content */}
           <div className="text-white">
@@ -30,7 +30,7 @@ const Hero = () => {
                   <span className="text-bo-orange"> Occitanie</span>
                 </h1>
                 <p className="text-xl text-gray-300 leading-relaxed mb-8">
-                  Spécialisés dans le bardage métallique et l'étanchéité, nous apportons 
+                  Spécialisés dans le bardage et l'étanchéité, nous apportons 
                   des solutions durables et performantes à vos projets de rénovation énergétique 
                   depuis 2019.
                 </p>
@@ -46,7 +46,7 @@ const Hero = () => {
                     <ArrowRight className="ml-2" size={20} />
                   </Button>
                 </Link>
-                <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-bo-dark">
+                <Button size="lg" variant="outline" className="border-white text-bo-dark hover:bg-bo-dark">
                   Découvrir nos réalisations
                 </Button>
               </div>
@@ -57,27 +57,14 @@ const Hero = () => {
           <AnimatedSection animation="slide-left" delay={300}>
             <div className="relative">
               <div className="bg-gradient-to-br from-bo-orange/20 to-bo-blue/20 rounded-2xl p-8 backdrop-blur-sm border border-white/10">
-                <div className="bg-gradient-to-br from-gray-200 to-gray-400 rounded-xl h-96 flex items-center justify-center">
-                  <div className="text-center text-gray-600">
-                    <Shield size={64} className="mx-auto mb-4" />
-                    <p className="text-lg font-semibold">Image de présentation</p>
-                    <p className="text-sm">Chantier ou équipe Bardeurs Occitans</p>
-                  </div>
-                </div>
+              <img src="./src/assets/hero-image.jpg" alt="" className='rounded-2xl' />
               </div>
 
               {/* Floating Cards */}
-              <div className="absolute -top-6 -right-6 bg-white rounded-lg p-4 shadow-xl">
-                <div className="flex items-center space-x-3">
-                  <div className="w-3 h-3 bg-green-500 rounded-full"></div>
-                  <span className="text-sm font-medium text-gray-700">Certifié DTU</span>
-                </div>
-              </div>
 
-              <div className="absolute -bottom-6 -left-6 bg-bo-orange rounded-lg p-4 shadow-xl text-white">
+              <div className="absolute -bottom-6 -left-6 bg-white rounded-lg p-2 shadow-xl">
                 <div className="text-center">
-                  <div className="text-lg font-bold">100%</div>
-                  <div className="text-xs">Satisfaction client</div>
+                  <img src="./src/assets/logo-rge-qualibat.png" alt="" width={75} height={75}/>
                 </div>
               </div>
             </div>
@@ -86,8 +73,8 @@ const Hero = () => {
       </div>
 
       {/* Scroll Indicator */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2">
-        <ArrowRight className="text-white rotate-90 hover:text-bo-orange transition-colors" size={24} />
+      <div className="absolute bottom-5 left-1/2 transform -translate-x-1/2">
+        <ArrowRight className="text-white rotate-90 hover:text-bo-orange transition-colors" size={22} />
       </div>
     </section>
   );

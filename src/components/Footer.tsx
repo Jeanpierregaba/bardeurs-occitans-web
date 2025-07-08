@@ -9,7 +9,7 @@ const Footer = () => {
     {
       title: "Services",
       links: [
-        { name: "Bardage métallique", href: "#" },
+        { name: "Bardage", href: "#" },
         { name: "Étanchéité", href: "#" },
         { name: "Rénovation énergétique", href: "#" },
         { name: "Maintenance", href: "#" }
@@ -38,11 +38,11 @@ const Footer = () => {
   return (
     <footer className="bg-bo-dark text-white">
       {/* Main Footer */}
-      <div className="container mx-auto px-4 py-16">
+      <div className="container mx-auto px-10 py-16">
         <div className="grid lg:grid-cols-4 gap-12">
           {/* Company Info */}
           <div className="lg:col-span-1">
-            <div className="mb-6">
+            <div className="mb-4">
               <img 
                 src="/lovable-uploads/logo-secondary.png" 
                 alt="Bardeurs Occitans" 
@@ -50,26 +50,14 @@ const Footer = () => {
               />
             </div>
             
-            <p className="text-gray-300 mb-6 leading-relaxed">
-              Spécialistes du bardage métallique et de l'étanchéité en Occitanie. 
-              Solutions durables et performantes pour vos projets de rénovation énergétique.
+            <p className="text-gray-300 mb-5 leading-relaxed text-sm">
+            Bardeurs Occitans est une entreprise spécialisée en bardage tous matériaux et en étanchéité (bitume & PVC) en Occitanie.
             </p>
 
-            <div className="space-y-3">
-              <div className="flex items-center space-x-3">
-                <Phone size={16} className="text-bo-orange" />
-                <span className="text-sm">05 XX XX XX XX</span>
-              </div>
-              <div className="flex items-center space-x-3">
-                <Mail size={16} className="text-bo-orange" />
-                <span className="text-sm">contact@bardeurs-occitans.fr</span>
-              </div>
-              <div className="flex items-center space-x-3">
-                <MapPin size={16} className="text-bo-orange" />
-                <span className="text-sm">Toulouse (31200), Occitanie</span>
-              </div>
-            </div>
+
           </div>
+
+          
 
           {/* Footer Links */}
           {footerLinks.map((section, index) => (
@@ -93,14 +81,29 @@ const Footer = () => {
             </div>
           ))}
         </div>
+
+        <div className="flex flex-row gap-10 justify-center">
+              <div className="flex items-center space-x-3">
+                <Phone size={16} className="text-bo-orange" />
+                <span className="text-sm">05 61 95 62 11</span>
+              </div>
+              <div className="flex items-center space-x-3">
+                <Mail size={16} className="text-bo-orange" />
+                <span className="text-sm">contact@bardeurs-occitans.fr</span>
+              </div>
+              <div className="flex items-center space-x-3">
+                <MapPin size={16} className="text-bo-orange" />
+                <span className="text-sm">Toulouse (31200), Occitanie</span>
+              </div>
+            </div>
       </div>
 
       {/* Bottom Bar */}
       <div className="border-t border-gray-700">
-        <div className="container mx-auto px-4 py-6">
+        <div className="container mx-auto px-10 py-6">
           <div className="flex flex-col md:flex-row justify-between items-center text-sm text-gray-400">
             <div className="mb-4 md:mb-0">
-              <p>&copy; {currentYear} Bardeurs Occitans. Tous droits réservés.</p>
+              <p>&copy; {currentYear} BOCA AGENCY. Tous droits réservés.</p>
             </div>
             
             <div className="flex items-center space-x-6">
@@ -108,7 +111,7 @@ const Footer = () => {
               <span>|</span>
               <span>Assurance décennale</span>
               <span>|</span>
-              <span>Membre du Groupe Gallart Bati Comminges</span>
+              <span>Membre du Groupe BGCSO</span>
             </div>
           </div>
         </div>

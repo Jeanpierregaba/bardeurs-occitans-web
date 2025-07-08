@@ -58,10 +58,10 @@ const About = () => {
   ];
 
   const advantages = [
-    "Respect des délais et qualité d'exécution",
-    "Projets techniques complexes",
-    "Accompagnement de la conception à la livraison",
-    "Solidité financière assurée",
+    "Respect des délais sans compromis sur la qualité",
+    "Maîtrise des projets techniques complexes",
+    "Un accompagnement global, de l’étude à la réception",
+    "Solidité financière et organisation fiable",
     "Engagement environnemental",
     "Service client personnalisé",
     "Suivi post-travaux et entretien",
@@ -70,7 +70,7 @@ const About = () => {
 
   return (
     <section id="apropos" className="py-20 bg-gray-50">
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-10">
         {/* Section Header */}
         <AnimatedSection animation="slide-up">
           <div className="text-center mb-16">
@@ -121,7 +121,7 @@ const About = () => {
           {/* Groupe Gallart */}
           <AnimatedSection animation="slide-right">
             <div>
-              <h3 className="text-3xl font-bold text-bo-dark mb-8">Groupe Gallart Bati Comminges</h3>
+              <h3 className="text-3xl font-bold text-bo-dark mb-8">Groupe BGCSO</h3>
               <p className="text-gray-600 mb-8 leading-relaxed">
                 Bardeurs Occitans fait partie d'un groupe solide de 4 entités complémentaires, 
                 offrant une expertise complète dans le domaine du BTP.
