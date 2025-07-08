@@ -40,7 +40,7 @@ const Contact = () => {
     {
       icon: <Phone className="text-bo-orange" size={24} />,
       title: "Téléphone",
-      content: "05 XX XX XX XX",
+      content: "05 61 95 62 11",
       subtitle: "Lun - Ven : 8h - 18h",
       description: "Appelez-nous pour un premier échange sur votre projet"
     },
@@ -54,7 +54,7 @@ const Contact = () => {
     {
       icon: <MapPin className="text-bo-orange" size={24} />,
       title: "Adresse",
-      content: "Toulouse (31200)",
+      content: "8 Impasse Edmond Audran - Toulouse (31200)",
       subtitle: "Zone d'intervention : Occitanie",
       description: "Déplacements possibles dans toute la région"
     },
@@ -68,7 +68,7 @@ const Contact = () => {
   ];
 
   const services = [
-    "Bardage métallique",
+    "Bardage",
     "Étanchéité toiture terrasse",
     "Isolation thermique par l'extérieur",
     "Rénovation énergétique",
@@ -106,7 +106,7 @@ const Contact = () => {
       
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-bo-dark via-bo-blue to-bo-dark text-white py-20">
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto px-10">
           <div className="text-center">
             <h1 className="text-5xl font-bold mb-6">
               <span className="text-bo-orange">Contactez</span> Nous
@@ -121,7 +121,7 @@ const Contact = () => {
 
       {/* Contact Cards */}
       <section className="py-20">
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto px-10">
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
             {contactInfo.map((info, index) => (
               <Card key={index} className="hover:shadow-xl transition-all duration-300 group">
@@ -356,7 +356,7 @@ const Contact = () => {
                   <div className="space-y-4">
                     <div className="flex items-center space-x-3">
                       <Badge className="bg-green-100 text-green-800">✓</Badge>
-                      <span className="text-sm text-gray-700">Certifié DTU</span>
+                      <span className="text-sm text-gray-700">Certifié RGE Qualibat</span>
                     </div>
                     <div className="flex items-center space-x-3">
                       <Badge className="bg-green-100 text-green-800">✓</Badge>
@@ -393,7 +393,7 @@ const Contact = () => {
 
       {/* CTA Section */}
       <section className="py-20 bg-bo-dark text-white">
-        <div className="container mx-auto px-4 text-center">
+        <div className="container mx-auto px-10 text-center">
           <h2 className="text-4xl font-bold mb-6">
             Besoin d'une intervention d'urgence ?
           </h2>
@@ -404,7 +404,7 @@ const Contact = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button size="lg" className="bg-red-600 hover:bg-red-700 text-white">
               <Phone className="mr-2" size={20} />
-              Urgence : 06 XX XX XX XX
+              Urgence : 05 61 95 62 11
             </Button>
             <Button size="lg" variant="outline" className="border-white text-bo-dark hover:bg-white hover:text-bo-dark">
               <Calendar className="mr-2" size={20} />

@@ -16,7 +16,7 @@ const Blog = () => {
       date: "15 mars 2024",
       author: "Nicolas Ferasse",
       category: "Bardage",
-      image: "bg-gradient-to-br from-gray-300 to-gray-400",
+      image: "./src/assets/blog-1.jpg",
       readTime: "5 min"
     },
     {
@@ -26,7 +26,7 @@ const Blog = () => {
       date: "8 mars 2024",
       author: "Équipe Bardeurs Occitans",
       category: "Étanchéité",
-      image: "bg-gradient-to-br from-blue-200 to-blue-300",
+      image: "./src/assets/blog-2.jpg",
       readTime: "7 min"
     },
     {
@@ -36,7 +36,7 @@ const Blog = () => {
       date: "1 mars 2024",
       author: "Nicolas Ferasse",
       category: "Rénovation",
-      image: "bg-gradient-to-br from-green-200 to-green-300",
+      image: "./src/assets/blog-3.jpg",
       readTime: "6 min"
     },
     {
@@ -46,7 +46,7 @@ const Blog = () => {
       date: "22 février 2024",
       author: "Équipe Bardeurs Occitans",
       category: "Technique",
-      image: "bg-gradient-to-br from-orange-200 to-orange-300",
+      image: "./src/assets/blog-4.jpg",
       readTime: "4 min"
     },
     {
@@ -56,7 +56,7 @@ const Blog = () => {
       date: "14 février 2024",
       author: "Nicolas Ferasse",
       category: "Maintenance",
-      image: "bg-gradient-to-br from-purple-200 to-purple-300",
+      image: "./src/assets/blog-5.jpg",
       readTime: "5 min"
     },
     {
@@ -66,7 +66,7 @@ const Blog = () => {
       date: "7 février 2024",
       author: "Équipe Bardeurs Occitans",
       category: "Réalisations",
-      image: "bg-gradient-to-br from-red-200 to-red-300",
+      image: "./src/assets/blog-6.jpg",
       readTime: "8 min"
     }
   ];
@@ -84,7 +84,7 @@ const Blog = () => {
       
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-bo-dark via-bo-blue to-bo-dark text-white py-20">
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto px-10">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl lg:text-5xl font-bold mb-6">
               Blog <span className="text-bo-orange">Expert</span>
@@ -119,12 +119,15 @@ const Blog = () => {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {filteredArticles.map((article) => (
               <Card key={article.id} className="overflow-hidden hover:shadow-xl transition-shadow duration-300">
-                <div className={`h-48 ${article.image} flex items-center justify-center`}>
-                  <div className="bg-bo-orange text-white px-3 py-1 rounded-full text-sm font-medium">
+                <div className='relative'>
+                  <div className="bg-bo-orange text-white px-3 py-1 mx-5 my-5 rounded-full text-sm font-medium absolute">
                     {article.category}
                   </div>
+                  <img src={article.image} alt="" className='w-full h-48 object-cover' />
                 </div>
                 
+
+
                 <CardHeader>
                   <CardTitle className="text-xl font-bold text-bo-dark line-clamp-2">
                     {article.title}

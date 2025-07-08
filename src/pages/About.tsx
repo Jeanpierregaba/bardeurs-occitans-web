@@ -25,16 +25,21 @@ const About = () => {
     },
     {
       year: "2021-2022",
-      title: "Consolidation", 
-      description: "Stabilisation avec un CA de 2M€",
+      title: "Croissance du chiffre d'affaires et développement de l’agence", 
+      description: "Stabilisation avec un CA de 2,6M€",
       details: "Période de consolidation pour renforcer nos équipes et nos processus qualité.",
       icon: <Award className="text-bo-orange" size={24} />
     },
     {
       year: "2024",
       title: "Nouvelle Croissance",
-      description: "15 salariés qualifiés, CA de 2,6M€",
+      description: "15 salariés qualifiés, CA actuel d’environ 3M€",
       details: "Retour à la croissance avec une équipe renforcée et des projets d'envergure.",
+      icon: <Users className="text-bo-orange" size={24} />
+    },
+    {
+      year: "2025",
+      title: "90% des travaux sont réalisés par nos compagnons en interne",
       icon: <Users className="text-bo-orange" size={24} />
     }
   ];
@@ -42,7 +47,7 @@ const About = () => {
   const groupeEntities = [
     {
       name: "Bardeurs Occitans",
-      specialty: "Bardage métallique et étanchéité",
+      specialty: "Bardage et étanchéité",
       description: "Notre cœur de métier, spécialisé dans les solutions de bardage et d'étanchéité pour tous types de bâtiments.",
       current: true
     },
@@ -97,7 +102,7 @@ const About = () => {
     "Engagement environnemental et solutions éco-responsables",
     "Service client personnalisé et approche à taille humaine",
     "Suivi post-travaux avec proposition de contrat d'entretien",
-    "Utilisation de matériaux certifiés DTU et avis techniques"
+    " Procédés suivant DTU et utilisation de matériaux avec avis techniques "
   ];
 
   return (
@@ -106,7 +111,7 @@ const About = () => {
       
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-bo-dark via-bo-blue to-bo-dark text-white py-20">
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto px-10">
           <div className="text-center">
             <h1 className="text-5xl font-bold mb-6">
               À <span className="text-bo-orange">Propos</span> de Nous
@@ -121,19 +126,19 @@ const About = () => {
 
       {/* Company Story */}
       <section className="py-20">
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto px-10">
           <div className="grid lg:grid-cols-2 gap-16 items-center mb-20">
             <div>
               <h2 className="text-4xl font-bold text-bo-dark mb-6">Notre Histoire</h2>
               <p className="text-lg text-gray-600 leading-relaxed mb-6">
-                Fondée en 2019 par Ferasse Nicolas, Bardeurs Occitans est née d'une vision claire : 
-                apporter des solutions de bardage et d'étanchéité de haute qualité en Occitanie.
+              Bardeurs Occitans a été fondée en 2019 par Nicolas Ferasse, président du Groupe BGCSO, avec une vision forte : proposer une offre globale en enveloppe du bâtiment, en synergie avec Gallart Bâtiment, entreprise spécialisée dans le gros œuvre.
               </p>
               <p className="text-lg text-gray-600 leading-relaxed mb-8">
-                Dès ses débuts, notre société a connu une croissance remarquable grâce à notre 
-                engagement envers l'excellence et la satisfaction de nos clients. Aujourd'hui, 
-                nous sommes fiers de compter 15 salariés qualifiés et d'avoir réalisé un chiffre 
-                d'affaires de 2,6M€ en 2024.
+              Née de cette complémentarité, Bardeurs Occitans s’est rapidement imposée comme un acteur de confiance dans les domaines du bardage, de la couverture et de l’étanchéité, en neuf comme en rénovation. 
+              Notre croissance s’appuie sur des valeurs de rigueur, de qualité et de proximité, au service de clients publics comme privés.
+              </p>
+              <p className="text-lg text-gray-600 leading-relaxed mb-8">
+              En 2024, l’entreprise affiche un chiffre d’affaires de 2,6 M€ et rassemble une équipe de 12 collaborateurs qualifiés, fiers de représenter notre engagement sur le terrain.
               </p>
               <Button className="bg-bo-orange hover:bg-bo-orange/90 text-white" size="lg">
                 Découvrir nos réalisations
@@ -143,13 +148,7 @@ const About = () => {
             
             <div className="relative">
               <Card className="overflow-hidden shadow-xl">
-                <div className="bg-gradient-to-br from-bo-orange/20 to-bo-blue/20 h-96 flex items-center justify-center">
-                  <div className="text-center text-bo-dark">
-                    <Building size={64} className="mx-auto mb-4 text-bo-orange" />
-                    <p className="text-lg font-semibold">Notre équipe en action</p>
-                    <p className="text-sm">15 professionnels à votre service</p>
-                  </div>
-                </div>
+                <img src="./src/assets/team-img.png" alt="" />
               </Card>
             </div>
           </div>
@@ -186,7 +185,7 @@ const About = () => {
 
       {/* Values */}
       <section className="py-20 bg-gray-50">
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto px-10">
           <h2 className="text-4xl font-bold text-bo-dark text-center mb-16">
             Nos <span className="text-bo-orange">Valeurs</span>
           </h2>
@@ -209,10 +208,10 @@ const About = () => {
 
       {/* Groupe Gallart */}
       <section className="py-20">
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto px-10">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-bo-dark mb-6">
-              Groupe <span className="text-bo-orange">Gallart Bati Comminges</span>
+              Groupe <span className="text-bo-orange">Gallart BGCSO</span>
             </h2>
             <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
               Bardeurs Occitans fait partie d'un groupe solide de 4 entités complémentaires, 
@@ -245,7 +244,7 @@ const About = () => {
 
       {/* Advantages */}
       <section className="py-20 bg-bo-dark text-white">
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto px-10">
           <h2 className="text-4xl font-bold text-center mb-16">
             Nos <span className="text-bo-orange">Avantages Concurrentiels</span>
           </h2>
@@ -263,7 +262,7 @@ const About = () => {
 
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-br from-bo-orange to-bo-orange/80 text-white">
-        <div className="container mx-auto px-4 text-center">
+        <div className="container mx-auto px-10 text-center">
           <h2 className="text-4xl font-bold mb-6">
             Rejoignez nos clients satisfaits
           </h2>
