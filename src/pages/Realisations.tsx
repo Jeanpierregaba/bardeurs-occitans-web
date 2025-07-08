@@ -6,41 +6,29 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { ArrowRight, MapPin, Calendar, Users, Award } from 'lucide-react';
-import gymnaseLegevin1x from '@/assets/gymnase-legevin-1x.jpg';
-import gymnaseLegevin2x from '@/assets/gymnase-legevin-2x.JPG';
-import trescal1x from '@/assets/trescal-1x.jpg';
-import trescal2x from '@/assets/trescal-2x.JPG';
-import sdis1x from '@/assets/sdis-1x.jpg';
-import sdis2x from '@/assets/sdis-2x.PNG';
-import muret1x from '@/assets/Muret-1x.jpg';
-import muret2x from '@/assets/Muret-2x.jpg';
-import rive1x from '@/assets/Rive-1x.jpg';
-import rive2x from '@/assets/Rive-2x.jpg';
-import grenade1x from '@/assets/grenade-1x.JPG';
-import grenade2x from '@/assets/grenade-2x.JPG';
 
 const Realisations = () => {
   const projects = [
     {
       title: "Gymnase de Léguevin",
-      location: "Toulouse", 
+      location: "Toulouse",
       year: "2025",
       type: "Bardage",
       duration: "3 mois",
-      description: "Bardage métallique double peau avec intégration de panneaux en polycarbonate coloré pour valoriser l'esthétique du nouveau gymnase municipal. Isolation thermique renforcée et rendu architectural moderne.",
-      beforeImage: gymnaseLegevin1x,
-      afterImage: gymnaseLegevin2x,
+      description: "Bardage métallique double peau avec intégration de panneaux en polycarbonate coloré pour valoriser l’esthétique du nouveau gymnase municipal. Isolation thermique renforcée et rendu architectural moderne.",
+      beforeImage: "./src/assets/gymnase-legevin-1x.jpg",
+      afterImage: "./src/assets/gymnase-legevin-2x.jpg",
       featured: true
     },
     {
       title: "Site industriel Trescal",
       location: "Toulouse",
-      year: "2025", 
+      year: "2025",
       type: "Rénovation Énergétique",
       duration: "4 mois",
-      description: "Rénovation complète des façades avec un bardage double peau métallique visant à améliorer les performances énergétiques et moderniser l'image du bâtiment tout en assurant une exécution en site occupé",
-      beforeImage: trescal1x,
-      afterImage: trescal2x,
+      description: "Rénovation complète des façades avec un bardage double peau métallique visant à améliorer les performances énergétiques et moderniser l’image du bâtiment tout en assurant une exécution en site occupé",
+      beforeImage: "./src/assets/trescal-1x.jpg",
+      afterImage: "./src/assets/trescal-2x.jpg",
       featured: true
     },
     {
@@ -49,9 +37,9 @@ const Realisations = () => {
       year: "2025",
       type: "Bâtiment public – SDIS",
       duration: "4 mois",
-      description: "Pose d'un bardage métallique double peau sur charpente métallique dans le cadre de la construction d'un nouveau centre d'intervention. Un projet technique alliant performance thermique et robustesse des matériaux. ",
-      beforeImage: sdis1x,
-      afterImage: sdis2x,
+      description: "Pose d’un bardage métallique double peau sur charpente métallique dans le cadre de la construction d’un nouveau centre d’intervention. Un projet technique alliant performance thermique et robustesse des matériaux. ",
+      beforeImage: "./src/assets/sdis-1x.jpg",
+      afterImage: "./src/assets/sdis-2x.png",
       featured: true
     },
     {
@@ -60,9 +48,9 @@ const Realisations = () => {
       year: "2024",
       type: "Étanchéité",
       duration: "3 mois",
-      description: "Réfection complète de l'étanchéité bitumineuse avec mise en place d'un isolant thermique et pose de gravillons pour la protection de la membrane.",
-      beforeImage: muret1x,
-      afterImage: muret2x,
+      description: "Réfection complète de l’étanchéité bitumineuse avec mise en place d’un isolant thermique et pose de gravillons pour la protection de la membrane.",
+      beforeImage: "./src/assets/Muret-1x.jpg",
+      afterImage: "./src/assets/Muret-2x.jpg",
       featured: false
     },
     {
@@ -71,9 +59,9 @@ const Realisations = () => {
       year: "2025",
       type: "Étanchéité – Couvertines",
       duration: "1 mois",
-      description: "Recherche de fuite sur toiture terrasse suivie du remplacement des couvertines en tête d'acrotères et modernisation de l'ensemble de l'ouvrage.",
-      beforeImage: rive1x,
-      afterImage: rive2x,
+      description: "Recherche de fuite sur toiture terrasse suivie du remplacement des couvertines en tête d’acrotères et modernisation de l’ensemble de l’ouvrage.",
+      beforeImage: "./src/assets/Rive-1x.jpg",
+      afterImage: "./src/assets/Rive-2x.jpg",
       featured: false
     },
     {
@@ -82,9 +70,9 @@ const Realisations = () => {
       year: "2025",
       type: "Bardage Bois + Métallique",
       duration: "6 mois",
-      description: "Pose d'un complexe mixte en bardage bois et métallique sur bâtiment neuf destiné au SDIS 31. Rendu esthétique et technique pour une enveloppe performante.",
-      beforeImage: grenade1x,
-      afterImage: grenade2x,
+      description: "Pose d’un complexe mixte en bardage bois et métallique sur bâtiment neuf destiné au SDIS 31. Rendu esthétique et technique pour une enveloppe performante.",
+      beforeImage: "./src/assets/grenade-1x.jpg",
+      afterImage: "./src/assets/grenade-2x.jpg",
       featured: false
     }
   ];

@@ -5,27 +5,25 @@ import { Button } from '@/components/ui/button';
 import { Wrench, Droplets, ArrowRight, CheckCircle } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import AnimatedSection from './AnimatedSection';
-import bardageImage from '@/assets/bardage.JPG';
-import etancheiteImage from '@/assets/etancheite-1.jpg';
 
 const Services = () => {
   const services = [
     {
       icon: <Wrench className="text-bo-orange" size={48} />,
       title: "Bardage",
-      description: "Nous proposons une large gamme de solutions de bardage adaptées à chaque bâtiment, en neuf comme en rénovation. Qu'il soit métallique, bois, composite ou en panneaux stratifiés, notre bardage améliore l'isolation, modernise l'apparence et protège durablement vos façades.",
+      description: "Nous proposons une large gamme de solutions de bardage adaptées à chaque bâtiment, en neuf comme en rénovation. Qu’il soit métallique, bois, composite ou en panneaux stratifiés, notre bardage améliore l’isolation, modernise l’apparence et protège durablement vos façades.",
       features: [
         "Tous types de bardage: métallique, bois, composite, stratifié HPL, panneaux aluminium",
         "Isolation thermique performante et réduction des ponts thermiques",
         "Bardage conforme aux normes DTU et exigences de la rénovation énergétique",
         "Accompagnement complet : conception, fourniture et installation par des professionnels qualifiés"
       ],
-      image: bardageImage
+      image: "./src/assets/bardage.jpg"
     },
     {
       icon: <Droplets className="text-bo-orange" size={48} />,
       title: "Étanchéité: protégez durablement vos bâtiments",
-      description: "Spécialistes de l'étanchéité des toitures-terrasses, nous utilisons des systèmes éprouvés (bitume ou membrane synthétique PVC) pour garantir une protection optimale contre les infiltrations, même en conditions extrêmes.",
+      description: "Spécialistes de l’étanchéité des toitures-terrasses, nous utilisons des systèmes éprouvés (bitume ou membrane synthétique PVC) pour garantir une protection optimale contre les infiltrations, même en conditions extrêmes.",
       features: [
         "Étanchéité bitumineuse et membranes PVC soudées à chaud",
         "Traitement anti-infiltration pour toitures plates, végétalisées ou accessibles",
@@ -33,7 +31,7 @@ const Services = () => {
         "Entretien, diagnostic et maintenance préventive",
         "Interventions sur bâtiments occupés avec gestion des contraintes de chantier"
       ],
-      image: etancheiteImage
+      image: "./src/assets/etancheite-1.jpg"
     }
   ];
 
@@ -47,7 +45,7 @@ const Services = () => {
               Nos <span className="text-bo-orange">Activités</span>
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            Spécialisés en bardage (métallique, bois, composite) et en étanchéité (bitume et membrane PVC), nous intervenons sur des projets neufs ou en rénovation pour améliorer la performance énergétique, l'esthétique et la durabilité de vos bâtiments.
+            Spécialisés en bardage (métallique, bois, composite) et en étanchéité (bitume et membrane PVC), nous intervenons sur des projets neufs ou en rénovation pour améliorer la performance énergétique, l’esthétique et la durabilité de vos bâtiments.
             </p>
           </div>
         </AnimatedSection>
@@ -57,8 +55,8 @@ const Services = () => {
           {services.map((service, index) => (
             <AnimatedSection key={index} animation="slide-up" delay={index * 100}>
               <Card className="overflow-hidden hover:shadow-lg transition-shadow duration-300 hover-lift">
-                <div className="h-75 flex items-center justify-center">
-                  <img src={service.image} alt="" />
+                <div className={`h-75 ${service.image} flex items-center justify-center`}>
+                  <img src={service.image} alt=""/>
                 </div>
                 
                 <CardContent className="p-8">

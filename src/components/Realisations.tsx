@@ -6,41 +6,35 @@ import { Badge } from '@/components/ui/badge';
 import { ArrowRight, MapPin, Calendar } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import AnimatedSection from './AnimatedSection';
-import gymnaseLegevin1x from '@/assets/gymnase-legevin-1x.jpg';
-import gymnaseLegevin2x from '@/assets/gymnase-legevin-2x.JPG';
-import trescal1x from '@/assets/trescal-1x.jpg';
-import trescal2x from '@/assets/trescal-2x.JPG';
-import sdis1x from '@/assets/sdis-1x.jpg';
-import sdis2x from '@/assets/sdis-2x.PNG';
 
 const Realisations = () => {
   const projects = [
     {
       title: "Gymnase de Léguevin",
-      location: "Toulouse", 
+      location: "Toulouse",
       year: "2025",
       type: "Bardage",
-      description: "Bardage métallique double peau avec intégration de panneaux en polycarbonate coloré pour valoriser l'esthétique du nouveau gymnase municipal. Isolation thermique renforcée et rendu architectural moderne.",
-      beforeImage: gymnaseLegevin1x,
-      afterImage: gymnaseLegevin2x
+      description: "Bardage métallique double peau avec intégration de panneaux en polycarbonate coloré pour valoriser l’esthétique du nouveau gymnase municipal. Isolation thermique renforcée et rendu architectural moderne.",
+      beforeImage: "./src/assets/gymnase-legevin-1x.jpg",
+      afterImage: "./src/assets/gymnase-legevin-2x.jpg"
     },
     {
       title: "Site industriel Trescal",
       location: "Toulouse",
-      year: "2025", 
+      year: "2025",
       type: "Rénovation Énergétique",
-      description: "Rénovation complète des façades avec un bardage double peau métallique visant à améliorer les performances énergétiques et moderniser l'image du bâtiment tout en assurant une exécution en site occupé",
-      beforeImage: trescal1x,
-      afterImage: trescal2x
+      description: "Rénovation complète des façades avec un bardage double peau métallique visant à améliorer les performances énergétiques et moderniser l’image du bâtiment tout en assurant une exécution en site occupé",
+      beforeImage: "./src/assets/trescal-1x.jpg",
+      afterImage: "./src/assets/trescal-2x.jpg"
     },
     {
       title: "Centre de secours SDIS 34",
       location: "Gignac",
       year: "2025",
       type: "Bâtiment public – SDIS",
-      description: "Pose d'un bardage métallique double peau sur charpente métallique dans le cadre de la construction d'un nouveau centre d'intervention. Un projet technique alliant performance thermique et robustesse des matériaux. ",
-      beforeImage: sdis1x,
-      afterImage: sdis2x
+      description: "Pose d’un bardage métallique double peau sur charpente métallique dans le cadre de la construction d’un nouveau centre d’intervention. Un projet technique alliant performance thermique et robustesse des matériaux. ",
+      beforeImage: "./src/assets/sdis-1x.jpg",
+      afterImage: "./src/assets/sdis-2x.png"
     }
   ];
 

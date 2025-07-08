@@ -6,12 +6,6 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Calendar, User, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import blog1 from '@/assets/blog-1.jpg';
-import blog2 from '@/assets/blog-2.jpg';
-import blog3 from '@/assets/blog-3.jpg';
-import blog4 from '@/assets/blog-4.jpg';
-import blog5 from '@/assets/blog-5.jpg';
-import blog6 from '@/assets/blog-6.jpg';
 
 const Blog = () => {
   const articles = [
@@ -22,7 +16,7 @@ const Blog = () => {
       date: "15 mars 2024",
       author: "Nicolas Ferasse",
       category: "Bardage",
-      image: blog1,
+      image: "./src/assets/blog-1.jpg",
       readTime: "5 min"
     },
     {
@@ -32,7 +26,7 @@ const Blog = () => {
       date: "8 mars 2024",
       author: "Équipe Bardeurs Occitans",
       category: "Étanchéité",
-      image: blog2,
+      image: "./src/assets/blog-2.jpg",
       readTime: "7 min"
     },
     {
@@ -42,7 +36,7 @@ const Blog = () => {
       date: "1 mars 2024",
       author: "Nicolas Ferasse",
       category: "Rénovation",
-      image: blog3,
+      image: "./src/assets/blog-3.jpg",
       readTime: "6 min"
     },
     {
@@ -52,7 +46,7 @@ const Blog = () => {
       date: "22 février 2024",
       author: "Équipe Bardeurs Occitans",
       category: "Technique",
-      image: blog4,
+      image: "./src/assets/blog-4.jpg",
       readTime: "4 min"
     },
     {
@@ -62,7 +56,7 @@ const Blog = () => {
       date: "14 février 2024",
       author: "Nicolas Ferasse",
       category: "Maintenance",
-      image: blog5,
+      image: "./src/assets/blog-5.jpg",
       readTime: "5 min"
     },
     {
@@ -72,7 +66,7 @@ const Blog = () => {
       date: "7 février 2024",
       author: "Équipe Bardeurs Occitans",
       category: "Réalisations",
-      image: blog6,
+      image: "./src/assets/blog-6.jpg",
       readTime: "8 min"
     }
   ];
