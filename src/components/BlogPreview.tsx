@@ -14,7 +14,7 @@ const BlogPreview = () => {
       date: "15 mars 2024",
       author: "Nicolas Ferasse",
       category: "Bardage",
-      image: "./src/assets/blog-1.jpg",
+      image: "/images/blog-1.jpg",
       readTime: "5 min"
     },
     {
@@ -24,7 +24,7 @@ const BlogPreview = () => {
       date: "8 mars 2024",
       author: "Équipe Bardeurs Occitans",
       category: "Étanchéité",
-      image: "./src/assets/blog-2.jpg",
+      image: "/images/blog-2.jpg",
       readTime: "7 min"
     },
     {
@@ -34,7 +34,7 @@ const BlogPreview = () => {
       date: "1 mars 2024",
       author: "Nicolas Ferasse",
       category: "Rénovation",
-      image: "./src/assets/blog-3.jpg",
+      image: "/images/blog-3.jpg",
       readTime: "6 min"
     }
   ];

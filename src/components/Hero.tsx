@@ -41,7 +41,7 @@ const Hero = () => {
             <AnimatedSection animation="slide-up" delay={200}>
               <div className="flex flex-col sm:flex-row gap-4 mb-12">
                 <Link to="/contact">
-                  <Button size="lg" className="bg-bo-orange hover:bg-bo-orange/90 text-white hover-lift">
+                  <Button size="lg" className="bg-bo-orange hover:bg-bo-orange/90 text-white">
                     Demander un devis gratuit
                     <ArrowRight className="ml-2" size={20} />
                   </Button>
@@ -57,14 +57,14 @@ const Hero = () => {
           <AnimatedSection animation="slide-left" delay={300}>
             <div className="relative">
               <div className="bg-gradient-to-br from-bo-orange/20 to-bo-blue/20 rounded-2xl p-8 backdrop-blur-sm border border-white/10">
-              <img src="src/assets/hero-image.jpg" alt="" className='rounded-2xl' />
+              <img src="/images/hero-image.jpg" alt="" className='rounded-2xl' />
               </div>
 
               {/* Floating Cards */}
 
               <div className="absolute -bottom-6 -left-6 bg-white rounded-lg p-2 shadow-xl">
                 <div className="text-center">
-                  <img src="./src/assets/logo-rge-qualibat.png" alt="" width={75} height={75}/>
+                  <img src="/images/logo-rge-qualibat.png" alt="" width={75} height={75}/>
                 </div>
               </div>
             </div>

@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
@@ -11,30 +10,30 @@ const Realisations = () => {
   const projects = [
     {
       title: "Gymnase de Léguevin",
-      location: "Toulouse",
+      location: "Toulouse", 
       year: "2025",
       type: "Bardage",
-      description: "Bardage métallique double peau avec intégration de panneaux en polycarbonate coloré pour valoriser l’esthétique du nouveau gymnase municipal. Isolation thermique renforcée et rendu architectural moderne.",
-      beforeImage: "./src/assets/gymnase-legevin-1x.jpg",
-      afterImage: "./src/assets/gymnase-legevin-2x.jpg"
+      description: "Bardage métallique double peau avec intégration de panneaux en polycarbonate coloré pour valoriser l'esthétique du nouveau gymnase municipal. Isolation thermique renforcée et rendu architectural moderne.",
+      beforeImage: "/images/gymnase-legevin-1x.jpg",
+      afterImage: "/images/gymnase-legevin-2x.jpg"
     },
     {
       title: "Site industriel Trescal",
       location: "Toulouse",
-      year: "2025",
+      year: "2025", 
       type: "Rénovation Énergétique",
-      description: "Rénovation complète des façades avec un bardage double peau métallique visant à améliorer les performances énergétiques et moderniser l’image du bâtiment tout en assurant une exécution en site occupé",
-      beforeImage: "./src/assets/trescal-1x.jpg",
-      afterImage: "./src/assets/trescal-2x.jpg"
+      description: "Rénovation complète des façades avec un bardage double peau métallique visant à améliorer les performances énergétiques et moderniser l'image du bâtiment tout en assurant une exécution en site occupé",
+      beforeImage: "/images/trescal-1x.jpg",
+      afterImage: "/images/trescal-2x.jpg"
     },
     {
       title: "Centre de secours SDIS 34",
       location: "Gignac",
       year: "2025",
       type: "Bâtiment public – SDIS",
-      description: "Pose d’un bardage métallique double peau sur charpente métallique dans le cadre de la construction d’un nouveau centre d’intervention. Un projet technique alliant performance thermique et robustesse des matériaux. ",
-      beforeImage: "./src/assets/sdis-1x.jpg",
-      afterImage: "./src/assets/sdis-2x.png"
+      description: "Pose d'un bardage métallique double peau sur charpente métallique dans le cadre de la construction d'un nouveau centre d'intervention. Un projet technique alliant performance thermique et robustesse des matériaux. ",
+      beforeImage: "/images/sdis-1x.jpg",
+      afterImage: "/images/sdis-2x.png"
     }
   ];
 
