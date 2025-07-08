@@ -21,89 +21,58 @@ const Realisations = () => {
       featured: true
     },
     {
-      title: "Étanchéité Centre Commercial Odysseum",
-      location: "Montpellier",
-      year: "2024",
-      type: "Étanchéité",
-      surface: "1 800 m²",
-      duration: "2 mois",
-      description: "Traitement complet de l'étanchéité toiture terrasse avec système d'évacuation des eaux pluviales et isolation thermique.",
-      challenges: [
-        "Travail en centre commercial ouvert",
-        "Étanchéité complexe multi-niveaux",
-        "Système d'évacuation innovant",
-        "Respect des délais stricts"
-      ],
-      beforeImage: "bg-gradient-to-br from-gray-200 to-gray-400",
-      afterImage: "bg-gradient-to-br from-blue-200 to-blue-300",
+      title: "Site industriel Trescal",
+      location: "Toulouse",
+      year: "2025",
+      type: "Rénovation Énergétique",
+      duration: "4 mois",
+      description: "Rénovation complète des façades avec un bardage double peau métallique visant à améliorer les performances énergétiques et moderniser l’image du bâtiment tout en assurant une exécution en site occupé",
+      beforeImage: "./src/assets/trescal-1x.jpg",
+      afterImage: "./src/assets/trescal-2x.jpg",
       featured: true
     },
     {
-      title: "Bâtiment Tertiaire Colomiers",
-      location: "Colomiers",
+      title: "Centre de secours SDIS 34",
+      location: "Gignac",
+      year: "2025",
+      type: "Bâtiment public – SDIS",
+      duration: "4 mois",
+      description: "Pose d’un bardage métallique double peau sur charpente métallique dans le cadre de la construction d’un nouveau centre d’intervention. Un projet technique alliant performance thermique et robustesse des matériaux. ",
+      beforeImage: "./src/assets/sdis-1x.jpg",
+      afterImage: "./src/assets/sdis-2x.png",
+      featured: true
+    },
+    {
+      title: "Mission Locale – Muret",
+      location: "Muret",
       year: "2024",
       type: "Étanchéité",
-      surface: "950 m²",
-      duration: "1,5 mois",
-      description: "Réfection complète de l'étanchéité avec membrane haute performance et isolation thermique par l'extérieur.",
-      challenges: [
-        "Étanchéité sur isolation",
-        "Respect de l'environnement",
-        "Coordination multi-corps d'état"
-      ],
-      beforeImage: "bg-gradient-to-br from-orange-200 to-orange-300",
-      afterImage: "bg-gradient-to-br from-purple-200 to-purple-300",
+      duration: "3 mois",
+      description: "Réfection complète de l’étanchéité bitumineuse avec mise en place d’un isolant thermique et pose de gravillons pour la protection de la membrane.",
+      beforeImage: "./src/assets/Muret-1x.jpg",
+      afterImage: "./src/assets/Muret-2x.jpg",
       featured: false
     },
     {
-      title: "Usine Agroalimentaire Muret",
-      location: "Muret",
-      year: "2023",
-      type: "Bardage + Étanchéité",
-      surface: "3 200 m²",
-      duration: "4 mois",
-      description: "Projet complet alliant bardage métallique moderne et système d'étanchéité haute technologie pour une usine agroalimentaire.",
-      challenges: [
-        "Normes alimentaires strictes",
-        "Isolation thermique performante",
-        "Résistance aux nettoyages intensifs"
-      ],
-      beforeImage: "bg-gradient-to-br from-yellow-200 to-yellow-300",
-      afterImage: "bg-gradient-to-br from-indigo-200 to-indigo-300",
+      title: "Lycée Rive Gauche – Toulouse",
+      location: "Toulouse",
+      year: "2025",
+      type: "Étanchéité – Couvertines",
+      duration: "1 mois",
+      description: "Recherche de fuite sur toiture terrasse suivie du remplacement des couvertines en tête d’acrotères et modernisation de l’ensemble de l’ouvrage.",
+      beforeImage: "./src/assets/Rive-1x.jpg",
+      afterImage: "./src/assets/Rive-2x.jpg",
       featured: false
     },
     {
-      title: "Lycée Technique Blagnac",
-      location: "Blagnac",
-      year: "2023",
-      type: "Bardage métallique",
-      surface: "1 400 m²",
-      duration: "2,5 mois",
-      description: "Rénovation énergétique complète avec bardage métallique et isolation par l'extérieur pour améliorer les performances thermiques.",
-      challenges: [
-        "Travail en établissement scolaire",
-        "Respect du calendrier scolaire",
-        "Performance énergétique élevée"
-      ],
-      beforeImage: "bg-gradient-to-br from-pink-200 to-pink-300",
-      afterImage: "bg-gradient-to-br from-teal-200 to-teal-300",
-      featured: false
-    },
-    {
-      title: "Entrepôt Logistique Portet",
-      location: "Portet-sur-Garonne",
-      year: "2023",
-      type: "Bardage + Étanchéité",
-      surface: "5 000 m²",
-      duration: "5 mois",
-      description: "Construction neuve avec bardage métallique et étanchéité complète pour un entrepôt logistique moderne.",
-      challenges: [
-        "Grande surface de travail",
-        "Résistance aux charges lourdes",
-        "Optimisation énergétique"
-      ],
-      beforeImage: "bg-gradient-to-br from-cyan-200 to-cyan-300",
-      afterImage: "bg-gradient-to-br from-emerald-200 to-emerald-300",
+      title: "SDIS 31 – Centre de secours Grenade",
+      location: "Grenade-sur-Garonne",
+      year: "2025",
+      type: "Bardage Bois + Métallique",
+      duration: "6 mois",
+      description: "Pose d’un complexe mixte en bardage bois et métallique sur bâtiment neuf destiné au SDIS 31. Rendu esthétique et technique pour une enveloppe performante.",
+      beforeImage: "./src/assets/grenade-1x.jpg",
+      afterImage: "./src/assets/grenade-2x.jpg",
       featured: false
     }
   ];
@@ -176,16 +145,15 @@ const Realisations = () => {
                   {/* Images Before/After */}
                   <div className="relative h-96">
                     <div className="grid grid-cols-2 h-full">
-                      <div className={`${project.beforeImage} flex items-center justify-center relative`}>
+                      <img src={project.beforeImage} alt="" className='w-full h-full object-cover group-hover:scale-105 transition-transform duration-700'/>
                         <Badge className="absolute top-4 left-4 bg-red-100 text-red-800">
                           Avant
                         </Badge>
-                      </div>
-                      <div className={`${project.afterImage} flex items-center justify-center relative`}>
+                        
+                      <img src={project.afterImage} alt="" className='w-full h-full object-cover'/>
                         <Badge className="absolute top-4 right-4 bg-green-100 text-green-800">
                           Après
                         </Badge>
-                      </div>
                     </div>
                   </div>
                   
@@ -210,9 +178,6 @@ const Realisations = () => {
                     
                     <div className="grid grid-cols-2 gap-4 mb-6 text-sm">
                       <div>
-                        <span className="font-semibold text-bo-dark">Surface:</span> {project.surface}
-                      </div>
-                      <div>
                         <span className="font-semibold text-bo-dark">Durée:</span> {project.duration}
                       </div>
                     </div>
@@ -220,18 +185,6 @@ const Realisations = () => {
                     <p className="text-gray-600 leading-relaxed mb-6">
                       {project.description}
                     </p>
-                    
-                    <div className="mb-6">
-                      <h4 className="font-semibold text-bo-dark mb-3">Défis techniques relevés :</h4>
-                      <div className="grid gap-2">
-                        {project.challenges.map((challenge, idx) => (
-                          <div key={idx} className="flex items-center space-x-2">
-                            <div className="w-2 h-2 bg-bo-orange rounded-full"></div>
-                            <span className="text-sm text-gray-600">{challenge}</span>
-                          </div>
-                        ))}
-                      </div>
-                    </div>
                     
                     <Button className="bg-bo-orange hover:bg-bo-orange/90 text-white w-full">
                       Voir les détails du projet
@@ -258,16 +211,14 @@ const Realisations = () => {
                 {/* Before/After Images */}
                 <div className="relative h-48">
                   <div className="grid grid-cols-2 h-full">
-                    <div className={`${project.beforeImage} relative`}>
+                    <img src={project.beforeImage} alt="" className='w-full h-48 object-cover group-hover:scale-105 transition-transform duration-700'/>
                       <Badge className="absolute top-2 left-2 bg-red-100 text-red-800 text-xs">
                         Avant
                       </Badge>
-                    </div>
-                    <div className={`${project.afterImage} relative`}>
+                    <img src={project.afterImage} alt="" className='w-full h-48 object-cover group-hover:scale-105 transition-transform duration-700'/>
                       <Badge className="absolute top-2 right-2 bg-green-100 text-green-800 text-xs">
                         Après
                       </Badge>
-                    </div>
                   </div>
                 </div>
                 
@@ -292,7 +243,7 @@ const Realisations = () => {
                   </div>
                   
                   <div className="text-xs text-gray-500 mb-4">
-                    <span className="font-medium">{project.surface}</span> • <span>{project.duration}</span>
+                    <span>{project.duration}</span>
                   </div>
                   
                   <p className="text-gray-600 text-sm leading-relaxed mb-4 line-clamp-3">
