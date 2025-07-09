@@ -4,6 +4,7 @@ import { Button } from '@/components/ui/button';
 import { ArrowRight, Shield } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import AnimatedSection from './AnimatedSection';
+import heroImage from '../assets/hero-image.jpg'
 
 const Hero = () => {
   return (
@@ -57,7 +58,7 @@ const Hero = () => {
           <AnimatedSection animation="slide-left" delay={300}>
             <div className="relative">
               <div className="bg-gradient-to-br from-bo-orange/20 to-bo-blue/20 rounded-2xl p-8 backdrop-blur-sm border border-white/10">
-              <img src="src/assets/hero-image.jpg" alt="" className='rounded-2xl' />
+              <img src={heroImage} alt="" className='rounded-2xl' />
               </div>
 
               {/* Floating Cards */}
