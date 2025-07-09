@@ -83,13 +83,13 @@ const Blog = () => {
       <Header />
       
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-bo-dark via-bo-blue to-bo-dark text-white py-16 md:py-20">
-        <div className="container mx-auto px-4 md:px-10">
+      <section className="bg-gradient-to-br from-bo-dark via-bo-blue to-bo-dark text-white py-20">
+        <div className="container mx-auto px-10">
           <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 md:mb-6">
+            <h1 className="text-4xl lg:text-5xl font-bold mb-6">
               Blog <span className="text-bo-orange">Expert</span>
             </h1>
-            <p className="text-lg md:text-xl text-gray-300 leading-relaxed">
+            <p className="text-xl text-gray-300 leading-relaxed">
               Actualités, conseils techniques et retours d'expérience de nos experts en bardage métallique et étanchéité
             </p>
           </div>
@@ -97,19 +97,18 @@ const Blog = () => {
       </section>
 
       {/* Filter Categories */}
-      <section className="py-8 md:py-12 bg-gray-50">
+      <section className="py-12 bg-gray-50">
         <div className="container mx-auto px-4">
-          <div className="flex flex-wrap justify-center gap-2 md:gap-4 mb-8 md:mb-12">
+          <div className="flex flex-wrap justify-center gap-4 mb-12">
             {categories.map((category) => (
               <Button
                 key={category}
                 variant={selectedCategory === category ? "default" : "outline"}
                 onClick={() => setSelectedCategory(category)}
-                size="sm"
-                className={`text-xs md:text-sm px-3 md:px-4 py-2 ${selectedCategory === category 
+                className={selectedCategory === category 
                   ? "bg-bo-orange hover:bg-bo-orange/90 text-white" 
                   : "border-bo-orange text-bo-orange hover:bg-bo-orange hover:text-white"
-                }`}
+                }
               >
                 {category}
               </Button>
@@ -117,45 +116,47 @@ const Blog = () => {
           </div>
 
           {/* Articles Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {filteredArticles.map((article) => (
-              <Card key={article.id} className="overflow-hidden hover:shadow-xl transition-shadow duration-300 h-full flex flex-col">
+              <Card key={article.id} className="overflow-hidden hover:shadow-xl transition-shadow duration-300">
                 <div className='relative'>
-                  <div className="bg-bo-orange text-white px-3 py-1 mx-4 my-4 rounded-full text-xs font-medium absolute z-10">
+                  <div className="bg-bo-orange text-white px-3 py-1 mx-5 my-5 rounded-full text-sm font-medium absolute">
                     {article.category}
                   </div>
                   <img src={article.image} alt="" className='w-full h-48 object-cover' />
                 </div>
+                
 
-                <CardHeader className="flex-grow">
-                  <CardTitle className="text-lg md:text-xl font-bold text-bo-dark line-clamp-2">
+
+                <CardHeader>
+                  <CardTitle className="text-xl font-bold text-bo-dark line-clamp-2">
                     {article.title}
                   </CardTitle>
                 </CardHeader>
                 
-                <CardContent className="pt-0">
-                  <p className="text-gray-600 mb-4 line-clamp-3 text-sm md:text-base">{article.excerpt}</p>
+                <CardContent>
+                  <p className="text-gray-600 mb-4 line-clamp-3">{article.excerpt}</p>
                   
-                  <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between text-xs md:text-sm text-gray-500 mb-4 space-y-2 sm:space-y-0">
-                    <div className="flex flex-col sm:flex-row sm:items-center sm:space-x-4 space-y-1 sm:space-y-0">
+                  <div className="flex items-center justify-between text-sm text-gray-500 mb-4">
+                    <div className="flex items-center space-x-4">
                       <div className="flex items-center space-x-1">
-                        <Calendar size={12} />
+                        <Calendar size={14} />
                         <span>{article.date}</span>
                       </div>
                       <div className="flex items-center space-x-1">
-                        <User size={12} />
-                        <span className="truncate">{article.author}</span>
+                        <User size={14} />
+                        <span>{article.author}</span>
                       </div>
                     </div>
-                    <span className="bg-gray-100 px-2 py-1 rounded text-xs self-start">
+                    <span className="bg-gray-100 px-2 py-1 rounded text-xs">
                       {article.readTime}
                     </span>
                   </div>
                   
                   <Link to={`/blog/${article.id}`}>
-                    <Button className="bg-bo-orange hover:bg-bo-orange/90 text-white w-full text-sm">
+                    <Button className="bg-bo-orange hover:bg-bo-orange/90 text-white w-full">
                       Lire l'article
-                      <ArrowRight className="ml-2" size={14} />
+                      <ArrowRight className="ml-2" size={16} />
                     </Button>
                   </Link>
                 </CardContent>
@@ -166,21 +167,21 @@ const Blog = () => {
       </section>
 
       {/* Newsletter Subscription */}
-      <section className="py-12 md:py-16 bg-bo-dark text-white">
+      <section className="py-16 bg-bo-dark text-white">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-2xl md:text-3xl font-bold mb-4">
+          <h2 className="text-3xl font-bold mb-4">
             Restez informé de nos dernières actualités
           </h2>
-          <p className="text-lg md:text-xl text-gray-300 mb-6 md:mb-8 max-w-2xl mx-auto">
+          <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
             Recevez nos conseils d'experts et nos dernières réalisations directement dans votre boîte mail
           </p>
-          <div className="max-w-md mx-auto flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+          <div className="max-w-md mx-auto flex space-x-4">
             <input
               type="email"
               placeholder="Votre adresse email"
-              className="flex-1 px-4 py-3 rounded-lg text-bo-dark text-sm md:text-base"
+              className="flex-1 px-4 py-3 rounded-lg text-bo-dark"
             />
-            <Button className="bg-bo-orange hover:bg-bo-orange/90 text-white px-6 md:px-8 py-3 text-sm md:text-base">
+            <Button className="bg-bo-orange hover:bg-bo-orange/90 text-white px-8 py-6">
               S'abonner
             </Button>
           </div>
