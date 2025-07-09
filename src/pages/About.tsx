@@ -148,7 +148,7 @@ const About = () => {
             
             <div className="relative">
               <Card className="overflow-hidden shadow-xl">
-                <img src="./src/assets/team-img.png" alt="" />
+                <img src="/assets/team-img.png" alt="" />
               </Card>
             </div>
           </div>
