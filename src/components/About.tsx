@@ -176,7 +176,7 @@ const About = () => {
             
             <div className="text-center">
               <Link to="/about">
-                <Button variant="outline" className="border-white text-white hover:bg-white hover:text-bo-dark hover-glow group w-full sm:w-auto text-sm sm:text-base py-2.5">
+                <Button variant="outline" className="border-white text-bo-dark hover:bg-white hover:text-bo-dark hover-glow group w-full sm:w-auto text-sm sm:text-base py-2.5">
                   Découvrir tous nos avantages
                   <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" size={16} />
                 </Button>
