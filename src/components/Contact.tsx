@@ -43,7 +43,7 @@ const Contact = () => {
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-bo-dark mb-4 md:mb-6">
               Contactez <span className="text-bo-orange">Nos Experts</span>
             </h2>
-            <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed px-4">
               Votre projet mérite une attention particulière. Contactez-nous pour 
               une étude personnalisée et un devis gratuit.
             </p>
@@ -165,7 +165,7 @@ const Contact = () => {
             </AnimatedSection>
 
             {/* CTA Card */}
-            <AnimatedSection animation="scale-in" delay={200}>
+            <AnimatedSection animation="scale" delay={200}>
               <Card className="bg-bo-dark text-white">
                 <CardContent className="p-6 md:p-8 text-center">
                   <h3 className="text-xl md:text-2xl font-bold mb-3 md:mb-4">

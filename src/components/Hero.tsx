@@ -45,7 +45,7 @@ const Hero = () => {
                 <Link to="/contact" className="w-full sm:w-auto">
                   <Button size="lg" className="bg-bo-orange hover:bg-bo-orange/90 text-white hover-lift w-full sm:w-auto text-sm md:text-base">
                     Demander un devis gratuit
-                    <ArrowRight className="ml-2" size={16} md:size={20} />
+                    <ArrowRight className="ml-2 w-4 h-4 md:w-5 md:h-5" />
                   </Button>
                 </Link>
                 <Link to="/realisations" className="w-full sm:w-auto">
@@ -77,7 +77,7 @@ const Hero = () => {
 
       {/* Scroll Indicator - Hidden on mobile */}
       <div className="absolute bottom-5 left-1/2 transform -translate-x-1/2 hidden md:block">
-        <ArrowRight className="text-white rotate-90 hover:text-bo-orange transition-colors" size={22} />
+        <ArrowRight className="text-white rotate-90 hover:text-bo-orange transition-colors w-6 h-6" />
       </div>
     </section>
   );

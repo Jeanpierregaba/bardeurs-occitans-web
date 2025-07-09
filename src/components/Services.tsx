@@ -102,7 +102,7 @@ const Services = () => {
         </div>
 
         {/* CTA Section */}
-        <AnimatedSection animation="scale-in">
+        <AnimatedSection animation="scale">
           <div className="bg-bo-dark rounded-xl md:rounded-2xl p-6 md:p-12 text-white text-center">
             <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-4 md:mb-6">
               Un projet en tête ?
