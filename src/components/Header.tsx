@@ -29,8 +29,8 @@ const Header = () => {
 
   return (
     <>
-      {/* Top Bar */}
-      <div className="bg-bo-dark text-white py-2 px-4 overflow-hidden">
+      {/* Top Bar - Hidden on mobile */}
+      <div className="bg-bo-dark text-white py-2 px-4 overflow-hidden hidden md:block">
         <div className="container mx-auto flex justify-between items-center text-sm">
           <div className="flex items-center space-x-4 animate-slide-in-left">
             <div className="flex items-center space-x-2 hover-glow">
@@ -42,7 +42,7 @@ const Header = () => {
               <span>contact@bardeurs-occitans.fr</span>
             </div>
           </div>
-          <div className="hidden md:block animate-slide-in-right">
+          <div className="animate-slide-in-right">
             <span>Zone d'intervention : Occitanie</span>
           </div>
         </div>
@@ -50,26 +50,26 @@ const Header = () => {
 
       {/* Main Header */}
       <header className={`bg-white shadow-lg sticky top-0 z-50 transition-all duration-300 ${isScrolled ? 'shadow-xl backdrop-blur-sm bg-white/95' : ''}`}>
-        <div className="container mx-auto px-10">
-          <div className="flex justify-between items-center h-20">
+        <div className="container mx-auto px-4 md:px-10">
+          <div className="flex justify-between items-center h-16 md:h-20">
             {/* Logo */}
             <div className="flex items-center">
               <Link to="/" className="hover-scale group">
                 <img 
                   src="/lovable-uploads/logo-bardeurs-occitans.png" 
                   alt="Bardeurs Occitans" 
-                  className="h-12 w-auto group-hover:brightness-110 transition-all duration-300"
+                  className="h-10 md:h-12 w-auto group-hover:brightness-110 transition-all duration-300"
                 />
               </Link>
             </div>
 
             {/* Desktop Navigation */}
-            <nav className="hidden lg:flex items-center space-x-8">
+            <nav className="hidden lg:flex items-center space-x-6 xl:space-x-8">
               {navItems.map((item, index) => (
                 <Link
                   key={item.name}
                   to={item.href}
-                  className={`transition-all duration-300 font-medium relative group animate-slide-in-down ${
+                  className={`transition-all duration-300 font-medium relative group animate-slide-in-down text-sm xl:text-base ${
                     location.pathname === item.href 
                       ? 'text-bo-orange' 
                       : 'text-bo-dark hover:text-bo-orange'
@@ -82,10 +82,10 @@ const Header = () => {
               ))}
             </nav>
 
-            {/* CTA Button */}
-            <div className="hidden lg:block animate-slide-in-right">
+            {/* CTA Button - Hidden on mobile */}
+            <div className="hidden md:block animate-slide-in-right">
               <Link to="/contact">
-                <Button className="bg-bo-orange hover:bg-bo-orange/90 text-white animate-pulse-glow hover-lift">
+                <Button size="sm" className="bg-bo-orange hover:bg-bo-orange/90 text-white animate-pulse-glow hover-lift text-sm">
                   Demander un devis
                 </Button>
               </Link>
@@ -93,7 +93,7 @@ const Header = () => {
 
             {/* Mobile Menu Button */}
             <button
-              className="lg:hidden hover-scale"
+              className="lg:hidden hover-scale p-2"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
             >
               <div className="relative w-6 h-6">
@@ -110,14 +110,26 @@ const Header = () => {
           </div>
 
           {/* Mobile Navigation */}
-          <div className={`lg:hidden overflow-hidden transition-all duration-500 ${isMenuOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'}`}>
-            <div className="py-4 border-t">
-              <nav className="flex flex-col space-y-4">
+          <div className={`lg:hidden overflow-hidden transition-all duration-500 ${isMenuOpen ? 'max-h-96 opacity-100 pb-4' : 'max-h-0 opacity-0'}`}>
+            <div className="pt-4 border-t">
+              {/* Mobile Top Bar Info */}
+              <div className="flex flex-col space-y-2 mb-4 text-sm text-gray-600">
+                <div className="flex items-center space-x-2">
+                  <Phone size={14} />
+                  <span>05 61 95 62 11</span>
+                </div>
+                <div className="flex items-center space-x-2">
+                  <Mail size={14} />
+                  <span>contact@bardeurs-occitans.fr</span>
+                </div>
+              </div>
+              
+              <nav className="flex flex-col space-y-3">
                 {navItems.map((item, index) => (
                   <Link
                     key={item.name}
                     to={item.href}
-                    className={`transition-all duration-300 font-medium hover-glow animate-slide-in-up ${
+                    className={`transition-all duration-300 font-medium hover-glow animate-slide-in-up py-2 text-base ${
                       location.pathname === item.href 
                         ? 'text-bo-orange' 
                         : 'text-bo-dark hover:text-bo-orange'
