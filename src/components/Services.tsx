@@ -18,7 +18,7 @@ const Services = () => {
         "Bardage conforme aux normes DTU et exigences de la rénovation énergétique",
         "Accompagnement complet : conception, fourniture et installation par des professionnels qualifiés"
       ],
-      image: "public/assets/bardage.jpg"
+      image: "/assets/bardage.jpg"
     },
     {
       icon: <Droplets className="text-bo-orange" size={48} />,
@@ -31,7 +31,7 @@ const Services = () => {
         "Entretien, diagnostic et maintenance préventive",
         "Interventions sur bâtiments occupés avec gestion des contraintes de chantier"
       ],
-      image: "./src/assets/etancheite-1.jpg"
+      image: "/assets/etancheite-1.jpg"
     }
   ];
 
