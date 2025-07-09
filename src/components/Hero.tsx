@@ -5,6 +5,7 @@ import { ArrowRight, Shield } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import AnimatedSection from './AnimatedSection';
 import heroImage from '../../public/assets/hero-image.jpg'
+import logoRge from '../../public/assets/logo-rge-qualibat.png'
 
 const Hero = () => {
   return (
@@ -65,7 +66,7 @@ const Hero = () => {
 
               <div className="absolute -bottom-6 -left-6 bg-white rounded-lg p-2 shadow-xl">
                 <div className="text-center">
-                  <img src="./src/assets/logo-rge-qualibat.png" alt="" width={75} height={75}/>
+                  <img src={logoRge} alt="" width={75} height={75}/>
                 </div>
               </div>
             </div>
