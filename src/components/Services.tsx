@@ -18,7 +18,7 @@ const Services = () => {
         "Bardage conforme aux normes DTU et exigences de la rénovation énergétique",
         "Accompagnement complet : conception, fourniture et installation par des professionnels qualifiés"
       ],
-      image: "../../public/assets/bardage.jpg"
+      image: "public/assets/bardage.jpg"
     },
     {
       icon: <Droplets className="text-bo-orange" size={48} />,
